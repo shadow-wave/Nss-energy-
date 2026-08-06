@@ -8,7 +8,7 @@
     <meta name="theme-color" content="#0284c7">
     <meta name="format-detection" content="telephone=no">
     <link rel="apple-touch-icon" href="college_logo.png">
-    <title>NSS എനർജി ഓഡിറ്റ് | MG College Iritty</title>
+    <title>NSS ഗ്രാമ ഊർജ്ജ ഓഡിറ്റ് | MG College Iritty</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -40,25 +40,25 @@
 
         .safe-pt { padding-top: calc(var(--safe-area-top) + 12px); }
         .safe-pb { padding-bottom: calc(var(--safe-area-bottom) + 12px); }
-        .header-spacing { padding-top: calc(var(--safe-area-top) + 105px); }
-        .nav-spacing { padding-bottom: calc(var(--safe-area-bottom) + 85px); }
+        .header-spacing { padding-top: calc(var(--safe-area-top) + 110px); }
+        .nav-spacing { padding-bottom: calc(var(--safe-area-bottom) + 90px); }
 
         .nav-blur {
-            background: rgba(255, 255, 255, 0.92);
+            background: rgba(255, 255, 255, 0.94);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
         }
 
         .nav-item { color: #94a3b8; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
         .nav-item.nav-active { color: var(--brand-sky); }
-        .nav-item.nav-active i { transform: translateY(-3px) scale(1.1); color: var(--brand-sky); }
+        .nav-item.nav-active i { transform: translateY(-4px) scale(1.1); color: var(--brand-sky); }
         .nav-item .nav-dot { opacity: 0; transform: translateY(4px); transition: all 0.3s; }
         .nav-item.nav-active .nav-dot { opacity: 1; transform: translateY(0); }
 
         .radio-tile-group input:checked + .radio-tile {
             border-color: var(--brand-sky) !important;
             background-color: #f0f9ff !important;
-            box-shadow: 0 6px 16px rgba(2, 132, 199, 0.12);
+            box-shadow: 0 6px 16px rgba(2, 132, 199, 0.15);
             transform: scale(0.985);
         }
         .radio-tile-group input:checked + .radio-tile .check-icon { display: flex; }
@@ -118,17 +118,17 @@
 
     <!-- സ്പ്ലാഷ് സ്ക്രീൻ (Splash Loader) -->
     <div id="loader" class="fixed inset-0 bg-slate-900 z-[200] flex flex-col items-center justify-center p-8 transition-opacity duration-500 text-white">
-        <div class="flex items-center gap-3 mb-6">
-            <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-xl p-1.5">
+        <div class="flex items-center gap-3.5 mb-6">
+            <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-xl p-1.5">
                 <img src="college_logo.png" onerror="this.style.display='none'" class="w-full h-full object-contain">
             </div>
-            <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-xl p-1.5 border-2 border-amber-400">
+            <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-xl p-1.5 border-2 border-amber-400">
                 <img src="nss_logo.png" onerror="this.style.display='none'" class="w-full h-full object-contain">
             </div>
         </div>
-        <h1 class="text-2xl font-black tracking-tight mb-1 text-center uppercase">NSS Energy Audit</h1>
+        <h1 class="text-2xl font-black tracking-tight mb-1 text-center uppercase">NSS Grama Energy Audit</h1>
         <p class="text-[11px] font-extrabold text-amber-400 tracking-widest uppercase mb-1 text-center">National Service Scheme (NSS)</p>
-        <p class="text-[10px] font-semibold text-slate-400 tracking-wider uppercase mb-8 text-center">Mahatma Gandhi College Iritty • NOT ME BUT YOU</p>
+        <p class="text-[10px] font-semibold text-sky-200 tracking-wider uppercase mb-8 text-center">Mahatma Gandhi College Iritty • NOT ME BUT YOU</p>
         
         <div class="relative w-8 h-8">
             <div class="absolute inset-0 border-3 border-white/20 rounded-full"></div>
@@ -187,7 +187,7 @@
         <div id="offline-alert-banner" class="hidden bg-amber-500 text-slate-900 px-4 py-2 text-[10px] font-extrabold flex items-center justify-between shadow-inner">
             <span class="flex items-center gap-2">
                 <i class="fa-solid fa-triangle-exclamation"></i>
-                <span>Offline Mode: ഡാറ്റ ഫോണിൽ സേവ് ചെയ്തു. നെറ്റ്‌വർക്ക് വരുമ്പോൾ Sync ആകും.</span>
+                <span>Offline Mode: ഫോണിൽ സേവ് ചെയ്തു. നെറ്റ്‌വർക്ക് വരുമ്പോൾ സിങ്ക് ആകും.</span>
             </span>
             <button onclick="manualSyncTrigger()" class="bg-slate-900 text-white px-2 py-0.5 rounded text-[8px] uppercase font-black tracking-wider">Sync Now</button>
         </div>
@@ -196,7 +196,7 @@
     <!-- പ്രധാന ഉള്ളടക്കം (Main Content Area) -->
     <main id="main-scroll" class="flex-grow overflow-y-auto no-scrollbar header-spacing nav-spacing relative w-full h-full print:h-auto print:overflow-visible print:block print:p-0 print:m-0">
         
-        <!-- ഡാഷ്‌ബോർഡ് व्यൂ (DASHBOARD VIEW) -->
+        <!-- ഡാഷ്‌ബോർഡ് വ്യൂ (DASHBOARD VIEW) -->
         <div id="view-dashboard" class="hidden px-4 py-4 space-y-5 max-w-xl mx-auto animate-view print-hidden">
             
             <!-- എൻ.എസ്.എസ് സമ്മറി കാർഡ് (Summary Card) -->
@@ -207,7 +207,7 @@
                         <div>
                             <span class="text-[9px] font-black bg-amber-400 text-slate-900 px-2.5 py-0.5 rounded-full uppercase tracking-wider">NSS Grama Survey</span>
                             <h2 id="stat-total" class="text-3xl font-black tracking-tight mt-1.5">0</h2>
-                            <p class="text-[10px] font-bold text-sky-200 uppercase tracking-wider">ആകെ പൂർത്തിയാക്കിയ സർവേകൾ</p>
+                            <p class="text-[10px] font-bold text-sky-200 uppercase tracking-wider">പൂർത്തിയാക്കിയ സർവേകൾ (Surveys)</p>
                         </div>
                         <button onclick="copyReportSummary()" class="w-11 h-11 bg-white/15 rounded-[16px] flex items-center justify-center active:scale-90 transition backdrop-blur-sm border border-white/20" title="WhatsApp Summary Copy">
                             <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i>
@@ -216,11 +216,11 @@
                     <div class="grid grid-cols-3 gap-2.5">
                         <div class="bg-white/10 p-3 rounded-[18px] text-center backdrop-blur-sm border border-white/10">
                             <p id="stat-members" class="text-lg font-black leading-none">0</p>
-                            <p class="text-[8px] font-bold uppercase text-sky-200 mt-1.5 tracking-wider">ആളുകൾ</p>
+                            <p class="text-[8px] font-bold uppercase text-sky-200 mt-1.5 tracking-wider">ആളുകൾ (Members)</p>
                         </div>
                         <div class="bg-white/10 p-3 rounded-[18px] text-center backdrop-blur-sm border border-emerald-400/30">
                             <p id="stat-pledges" class="text-lg font-black text-emerald-300 leading-none">0</p>
-                            <p class="text-[8px] font-bold uppercase text-emerald-200/90 mt-1.5 tracking-wider">പ്രതിജ്ഞകൾ</p>
+                            <p class="text-[8px] font-bold uppercase text-emerald-200/90 mt-1.5 tracking-wider">പ്രതിജ്ഞ (Pledges)</p>
                         </div>
                         <div class="bg-white/10 p-3 rounded-[18px] text-center backdrop-blur-sm border border-amber-400/30">
                             <p id="stat-solar" class="text-lg font-black text-amber-300 leading-none">0%</p>
@@ -230,7 +230,7 @@
                 </div>
             </div>
 
-            <!-- ഗ്രാമീണ കൺസംപ്ഷൻ & കാർബൺ അനലിറ്റിക്സ് (Village Energy & Carbon) -->
+            <!-- ഗ്രാമീണ ഉപയോഗവും കാർബൺ അളവും (Village Energy & Carbon) -->
             <div class="bg-gradient-to-r from-slate-900 to-sky-950 rounded-[28px] p-5 text-white shadow-sm">
                 <div class="flex items-center justify-between mb-3.5">
                     <h3 class="text-[10px] font-black text-amber-400 uppercase tracking-[0.2em] flex items-center gap-2">
@@ -242,12 +242,12 @@
                     <div class="bg-white/5 p-3.5 rounded-[18px] border border-white/10">
                         <p class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">വാർഷിക ഉപയോഗം</p>
                         <p class="text-xl font-black text-sky-300 mt-0.5"><span id="stat-est-kwh">0</span> <span class="text-[10px] font-normal text-slate-300">kWh/yr</span></p>
-                        <p class="text-[8px] text-sky-400/80 mt-0.5 font-semibold">ആകെ സർവേ ചെയ്തത്</p>
+                        <p class="text-[8px] text-sky-400/80 mt-0.5 font-semibold">ആകെ കണക്കാക്കിയത്</p>
                     </div>
                     <div class="bg-white/5 p-3.5 rounded-[18px] border border-white/10">
-                        <p class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">കാർബൺ ഫൂട്ട്പ്രിന്റ്</p>
+                        <p class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">കാർബൺ അളവ് (CO₂)</p>
                         <p class="text-xl font-black text-emerald-400 mt-0.5"><span id="stat-est-co2">0</span> <span class="text-[10px] font-normal text-slate-300">kg CO₂</span></p>
-                        <p class="text-[8px] text-emerald-400/80 mt-0.5 font-semibold">0.72 kg/kWh തോതിൽ</p>
+                        <p class="text-[8px] text-emerald-400/80 mt-0.5 font-semibold">0.72 kg/kWh കണക്കിൽ</p>
                     </div>
                 </div>
                 <div class="mt-3 bg-white/5 p-3 rounded-[16px] border border-white/10 flex items-center justify-between">
@@ -262,12 +262,12 @@
             <!-- സാങ്കേതിക വിദ്യ സൂചിക (Technology Index) -->
             <div class="bg-white rounded-[28px] p-5 border border-slate-100 shadow-sm">
                 <h3 class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-4 flex items-center gap-2">
-                    <i class="fa-solid fa-lightbulb text-amber-500 text-sm"></i> ഊർജ്ജക്ഷമതയുള്ള ഉപകരണങ്ങളുടെ ഉപയോഗം
+                    <i class="fa-solid fa-lightbulb text-amber-500 text-sm"></i> ഊർജ്ജക്ഷമതയുള്ള ഉപകരണങ്ങൾ
                 </h3>
                 <div class="grid grid-cols-3 gap-2.5">
                     <div class="bg-amber-50/70 rounded-[18px] p-3 text-center border border-amber-100">
                         <p id="stat-led" class="text-lg font-black text-amber-600">0%</p>
-                        <p class="text-[8px] font-bold text-amber-500 uppercase mt-1 tracking-wider">100% LED</p>
+                        <p class="text-[8px] font-bold text-amber-500 uppercase mt-1 tracking-wider">100% LED ലൈറ്റുകൾ</p>
                     </div>
                     <div class="bg-cyan-50/70 rounded-[18px] p-3 text-center border border-cyan-100">
                         <p id="stat-bldc" class="text-lg font-black text-cyan-600">0%</p>
@@ -283,7 +283,7 @@
             <!-- അപചയ & കണക്ഷൻ ഇൻസൈറ്റുകൾ (Risk Bars) -->
             <div class="bg-white rounded-[28px] p-5 border border-slate-100 shadow-sm">
                 <h3 class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-4 flex items-center gap-2">
-                    <i class="fa-solid fa-chart-pie text-sky-500 text-sm"></i> പൊതുവായ വൈദ്യുതി അപചയങ്ങൾ
+                    <i class="fa-solid fa-chart-pie text-sky-500 text-sm"></i> സാധാരണ വൈദ്യുതി അപചയങ്ങൾ
                 </h3>
                 <div id="risk-bars" class="space-y-4 mb-6">
                     <!-- JS വഴി ലോഡ് ചെയ്യും -->
@@ -390,7 +390,7 @@
                             </div>
                         </div>
                         <div class="space-y-2.5">
-                            <input type="text" name="volunteerName" required placeholder="NSS വോളന്റിയറുടെ പൂർണ്ണ പേര് (Volunteer Name)" class="w-full p-3.5 bg-slate-50 border border-slate-100 rounded-[18px] focus:bg-white focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 outline-none transition text-xs font-medium">
+                            <input type="text" name="volunteerName" required placeholder="NSS വോളന്റിയറുടെ പേര് (Volunteer Name)" class="w-full p-3.5 bg-slate-50 border border-slate-100 rounded-[18px] focus:bg-white focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 outline-none transition text-xs font-medium">
                             <div class="grid grid-cols-2 gap-2.5">
                                 <input type="number" name="wardNo" required inputmode="numeric" placeholder="വാർഡ് നമ്പർ (Ward #)" class="w-full p-3.5 bg-slate-50 border border-slate-100 rounded-[18px] focus:bg-white focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 outline-none transition text-xs font-medium">
                                 <input type="text" name="houseNo" required placeholder="വീട്ടു നമ്പർ / ഹൗസ് ഐഡി" class="w-full p-3.5 bg-slate-50 border border-slate-100 rounded-[18px] focus:bg-white focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 outline-none transition text-xs font-medium">
@@ -871,22 +871,22 @@
                 let memCount = parseInt(s.membersCount) || 0;
                 stats.members += memCount;
                 if(s.pledge?.includes('Yes')) stats.pledges++;
-                if(s.q15 && s.q15.startsWith('Yes')) stats.solarCount++;
-                if(s.q4 === '100% LED Lighting (High Efficacy)') stats.ledCount++;
-                if(s.q7 === 'Energy-efficient BLDC Motor Fans (~28W)') stats.bldcCount++;
+                if(s.q13 && s.q15?.startsWith('Yes')) stats.solarCount++;
+                if(s.q4 === '100% LED ലൈറ്റുകൾ (Fully LED Lighting)') stats.ledCount++;
+                if(s.q8b === 'BLDC ഊർജ്ജക്ഷമതയുള്ള ഫാനുകൾ (~28W)') stats.bldcCount++;
                 if(s.q18 && s.q18.includes('അതെ')) stats.evCount++; 
-                if(s.q14 === 'Left on Standby Mode (TV, Set-top Box, Chargers plugged in)') stats.standbyRisk++;
-                if(s.q8 === 'മാനുവൽ സ്വിച്ച് — പലപ്പോഴും ടാങ്ക് കവിഞ്ഞൊഴുകാറുണ്ട്') stats.overflowRisk++;
-                if(s.q11 === 'Below 24°C (High compressor duty cycle)') stats.lowACRisk++;
-                if(s.q8b === 'ദിവസവും ഉപയോഗിക്കുന്നു (High Thermal Load)') stats.thermalRisk++;
-                if(s.q16 === 'Not installed / Faulty' || s.q16 === "Don't Know") stats.safetyHazard++;
+                if(s.q6 === 'ഡിവിഡി/ടിവി കാണാത്തപ്പോഴും പ്ലഗിൽ ഇട്ടിരിക്കാറുണ്ട് (Standby Loss)') stats.standbyRisk++;
+                if(s.q8 === 'മാനുവൽ സ്വിച്ച് (പലപ്പോഴും ടാങ്ക് കവിഞ്ഞൊഴുകാറുണ്ട്)') stats.overflowRisk++;
+                if(s.q11 === '24°C ൽ താഴെ തണുപ്പിൽ (High Compressor Load)') stats.lowACRisk++;
+                if(s.q8b === 'സാധാരണ ഫാനുകൾ (~75W Induction Motor)') stats.thermalRisk++;
+                if(s.q16 === 'തകരാറിലായിരിക്കുന്നു / മെയിൻ ബോർഡിൽ ഇല്ല' || s.q16 === 'അറിയില്ല') stats.safetyHazard++;
 
                 if (s.q1 !== 'ഇലക്ട്രിസിറ്റി ഇല്ല (No Electrical Connection)') {
                     let bimonthlyUnits = 180;
-                    if(s.q2 === 'Below 100 Units') bimonthlyUnits = 80;
-                    else if(s.q2 === '100 – 200 Units') bimonthlyUnits = 160;
-                    else if(s.q2 === '200 – 400 Units') bimonthlyUnits = 300;
-                    else if(s.q2 === 'Above 400 Units') bimonthlyUnits = 500;
+                    if(s.q2 === 'Below ₹500 (വളരെ കുറഞ്ഞ ഉപയോഗം)') bimonthlyUnits = 80;
+                    else if(s.q2 === '₹500 – ₹1500 (സാധാരണ ഉപയോഗം)') bimonthlyUnits = 160;
+                    else if(s.q2 === '₹1500 – ₹3000 (കൂടുതൽ ഉപയോഗം)') bimonthlyUnits = 300;
+                    else if(s.q2 === 'Above ₹3000 (ഉയർന്ന ഉപയോഗം)') bimonthlyUnits = 500;
 
                     let annualKwh = bimonthlyUnits * 6;
                     stats.totalEstKwh += annualKwh;
@@ -920,7 +920,7 @@
             if(riskContainer) {
                 const risks = [
                     { l: 'Standby Power Losses', v: stats.standbyRisk, c: 'bg-rose-500', i: 'fa-plug-circle-xmark' },
-                    { l: 'Heavy Thermal Load Usage', v: stats.thermalRisk, c: 'bg-pink-500', i: 'fa-fire' },
+                    { l: 'Induction Motor Fan Load', v: stats.thermalRisk, c: 'bg-pink-500', i: 'fa-fan' },
                     { l: 'Water Motor Overflows', v: stats.overflowRisk, c: 'bg-amber-500', i: 'fa-glass-water-droplet' },
                     { l: 'AC Temp < 24°C (High Load)', v: stats.lowACRisk, c: 'bg-orange-500', i: 'fa-temperature-arrow-down' },
                     { l: 'ELCB Safety Hazard', v: stats.safetyHazard, c: 'bg-purple-500', i: 'fa-triangle-exclamation' },
@@ -944,7 +944,7 @@
                     <div>
                         <div class="flex justify-between text-[11px] font-extrabold text-slate-700 mb-1.5">
                             <span>${label}</span>
-                            <span class="text-slate-400 font-bold">${count} Homes</span>
+                            <span class="text-slate-400 font-bold">${count} വീടുകൾ</span>
                         </div>
                         <div class="w-full bg-slate-50 h-2 rounded-full overflow-hidden shadow-inner border border-slate-100">
                             <div class="bg-sky-700 h-full transition-all duration-1000 ease-out" style="width: ${(count/total)*100}%"></div>
@@ -1250,37 +1250,36 @@
         };
 
         function buildMobileForm() {
+            // NSS ഗ്രാമ സർവേ ചോദ്യങ്ങൾ (Community and Household level)
             const q = [
-                { id: 'sec1', l: 'Section 1: ഇലക്ട്രിസിറ്റി കണക്ഷൻ വിവരങ്ങൾ', qs: [
-                    { id: 'q1', m: 'കെ.എസ്.ഇ.ബി (KSEB) കണക്ഷൻ തരം', e: 'KSEB Electrical Grid Connection', o: ['സിംഗിൾ ഫേസ് (Single Phase)', 'ത്രീ ഫേസ് (Three Phase)', 'ഇലക്ട്രിസിറ്റി ഇല്ല (No Electrical Connection)'] },
-                    { id: 'q2', m: 'രണ്ടു മാസത്തെ ശരാശരി ഉപയോഗം (KSEB Bill Units)', e: 'Bi-monthly Energy Consumption (kWh)', o: ['Below 100 Units', '100 – 200 Units', '200 – 400 Units', 'Above 400 Units', 'ബാധകമല്ല (N/A)'], isElec: true },
-                    { id: 'q3', m: 'വീടിന്റെ മേൽക്കൂരയുടെ നിർമ്മാണ രീതി', e: 'Roof Construction Type', o: ['Concrete Roof (Insulation ഇല്ല)', 'Concrete Roof with Cool Paint / Truss', 'Tiled / Sheet Roof with Ceiling Insulation', 'Tiled / Sheet Roof without Insulation', 'Eco-friendly Architecture'] }
+                { id: 'sec1', l: 'Section 1: വീടും KSEB വൈദ്യുതി കണക്ഷനും', qs: [
+                    { id: 'q1', m: 'കെ.എസ്.ഇ.ബി (KSEB) കണക്ഷൻ രീതി', e: 'Electrical Grid Connection Type', o: ['സിംഗിൾ ഫേസ് (Single Phase)', 'ത്രീ ഫേസ് (Three Phase)', 'ഇലക്ട്രിസിറ്റി ഇല്ല (No Electrical Connection)'] },
+                    { id: 'q2', m: 'രണ്ടു മാസത്തെ ശരാശരി വൈദ്യുതി ബിൽ തുക', e: 'Average Bi-monthly Electricity Bill Range', o: ['Below ₹500 (വളരെ കുറഞ്ഞ ഉപയോഗം)', '₹500 – ₹1500 (സാധാരണ ഉപയോഗം)', '₹1500 – ₹3000 (കൂടുതൽ ഉപയോഗം)', 'Above ₹3000 (ഉയർന്ന ഉപയോഗം)', 'ബാധകമല്ല (N/A)'], isElec: true },
+                    { id: 'q3', m: 'വീടിന്റെ മേൽക്കൂരയും കാറ്റോട്ട സംവിധാനവും', e: 'Roof Construction & Natural Ventilation', o: ['കോൺക്രീറ്റ് (Concrete Roof)', 'കോൺക്രീറ്റും ട്രസ്സും / കൂൾ പെയിന്റും', 'ഓട് / ഷീറ്റ് മേൽക്കൂര (സീലിംഗ് ഉള്ളത്)', 'ഓട് / ഷീറ്റ് മേൽക്കൂര (സീലിംഗ് ഇല്ലാത്തത്)', 'പരമ്പരാഗത / ഹരിത നിർമ്മാണം'] }
                 ]},
-                { id: 'sec2', l: 'Section 2: വെളിച്ചവും ലൈറ്റുകളുടെ ഉപയോഗവും', qs: [
-                    { id: 'q4', m: 'പ്രധാനമായും ഉപയോഗിക്കുന്ന ലൈറ്റുകൾ', e: 'Primary Lighting Technology', o: ['100% LED Lighting (High Efficacy)', 'Mix of LED & CFL / Old Tubelights', 'Mostly Incandescent (Filament) Bulbs', 'ലൈറ്റുകൾ ഉപയോഗിക്കുന്നില്ല (None)'], isElec: true },
-                    { id: 'q5', m: 'പകൽ സമയത്തെ സ്വാഭാവിക വെളിച്ചത്തിന്റെ ഉപയോഗം', e: 'Natural Daylighting Utilization', o: ['Sufficient (പകൽ ലൈറ്റുകൾ ഉപയോഗിക്കാറില്ല)', 'ചില റൂമുകളിൽ പകൽ ലൈറ്റ് ഉപയോഗിക്കാറുണ്ട്', 'പകൽ സമയം മുഴുവൻ ലൈറ്റുകൾ ഓൺ ആണ്', 'ബാധകമല്ല (N/A)'], isElec: true },
-                    { id: 'q6', m: 'മുറ്റത്തെ ലൈറ്റുകൾ പകൽ സമയത്ത് ഓഫ് ചെയ്യാറുണ്ടോ?', e: 'Daytime Outdoor Light Management', o: ['Promptly switched OFF / Auto-sensor ഉണ്ട്', 'ചില സമയങ്ങളിൽ ഓഫ് ചെയ്യാൻ മറക്കാറുണ്ട്', 'പുറത്ത് ലൈറ്റുകൾ ഇല്ല (No Outdoor Lights)'], isElec: true }
+                { id: 'sec2', l: 'Section 2: വെളിച്ചവും ഗാർഹിക ലൈറ്റ് ഉപയോഗവും', qs: [
+                    { id: 'q4', m: 'വീട്ടിൽ ഉപയോഗിക്കുന്ന പ്രധാന ലൈറ്റുകൾ', e: 'Primary Lighting Type', o: ['100% LED ലൈറ്റുകൾ (Fully LED Lighting)', 'LED ബൾബുകളും പഴയ ട്യൂബ്‌ലൈറ്റുകളും', 'കൂടുതലും യെല്ലോ/ഫിലമെന്റ് ബൾബുകൾ', 'ലൈറ്റുകൾ ഉപയോഗിക്കാറില്ല (None)'], isElec: true },
+                    { id: 'q5', m: 'പകൽ സമയം ലൈറ്റുകൾ ഉപയോഗിക്കേണ്ടി വരാറുണ്ടോ?', e: 'Daytime Natural Lighting Utilization', o: ['ഇല്ല (സ്വാഭാവിക വെളിച്ചം ലഭിക്കുന്നു)', 'ചില മുറികളിൽ മാത്രം പകൽ ലൈറ്റ് ഇടാറുണ്ട്', 'പകൽ സമയം മുഴുവൻ ലൈറ്റുകൾ ഓൺ ആണ്', 'ബാധകമല്ല (N/A)'], isElec: true },
+                    { id: 'q6', m: 'ഉപയോഗം കഴിഞ്ഞാൽ പ്ലഗ്ഗിൽ നിന്ന് സ്വിച്ച് ഓഫ് ചെയ്യാറുണ്ടോ?', e: 'Standby Power Losses Habit', o: ['ഉടൻ സ്വിച്ച് ഓഫ് ചെയ്യാറുണ്ട് (Power Saved)', 'ഡിവിഡി/ടിവി കാണാത്തപ്പോഴും പ്ലഗിൽ ഇട്ടിരിക്കാറുണ്ട് (Standby Loss)', 'ബാധകമല്ല (N/A)'], isElec: true }
                 ]},
-                { id: 'sec3', l: 'Section 3: മോട്ടോറുകളും ഗാർഹിക ഉപകരണങ്ങളും', qs: [
-                    { id: 'q7', m: 'സീലിംഗ് ഫാനുകളുടെ ടൈപ്പ് (Motor Tech)', e: 'Ceiling Fan Motors Type', o: ['Energy-efficient BLDC Motor Fans (~28W)', 'Conventional Induction Motor Fans (~75W)', 'Mix of BLDC and Conventional Fans', 'ഫാനുകൾ ഇല്ല (No Ceiling Fans)'], isElec: true },
-                    { id: 'q8', m: 'വാട്ടർ പമ്പ് മോട്ടോർ (Water Pump) നിയന്ത്രണം', e: 'Water Pump Motor Control', o: ['ഓട്ടോമാറ്റിക് വാട്ടർ ലെവൽ സെൻസർ / അലാറം', 'മാനുവൽ സ്വിച്ച് — നിറയുമ്പോൾ കൃത്യമായി ഓഫ് ചെയ്യും', 'മാനുവൽ സ്വിച്ച് — പലപ്പോഴും ടാങ്ക് കവിഞ്ഞൊഴുകാറുണ്ട്', 'വാട്ടർ പമ്പ് ഇല്ല (No Water Pump)'], isElec: true },
-                    { id: 'q8b', m: 'ഉയർന്ന വാട്ടേജ് ഉപകരണങ്ങൾ (Iron Box, Washer, Oven)', e: 'Heavy Thermal Load Appliances', o: ['ദിവസവും ഉപയോഗിക്കുന്നു (High Thermal Load)', 'ആഴ്ചയിൽ ചില ദിവസങ്ങളിൽ മാത്രം (Moderate Usage)', 'വളരെ കുറവ് / ഇല്ല (Rare or None)'], isElec: true }
+                { id: 'sec3', l: 'Section 3: പാചകം, വാട്ടർ പമ്പ് & മോട്ടോറുകൾ', qs: [
+                    { id: 'q7', m: 'പാചകത്തിന് ഉപയോഗിക്കുന്ന പ്രധാന ഇന്ധനം', e: 'Primary Cooking Fuel Source', o: ['LPG ഗ്യാസ്', 'വിറക് (Biomass / Firewood)', 'ഇൻഡക്ഷൻ / ഇലക്ട്രിക് അടുപ്പ്', 'ഹൈബ്രിഡ് (LPG + വിറക് / ഇലക്ട്രിക്)'] },
+                    { id: 'q8', m: 'വാട്ടർ പമ്പ് ഉപയോഗവും ടാങ്ക് കവിഞ്ഞൊഴുകലും', e: 'Water Pump Usage & Overflow Control', o: ['ഓട്ടോമാറ്റിക് വാട്ടർ ലെവൽ സെൻസർ / അലാറം', 'മാനുവൽ സ്വിച്ച് (നിറയുമ്പോൾ ശ്രദ്ധയോടെ ഓഫ് ചെയ്യും)', 'മാനുവൽ സ്വിച്ച് (പലപ്പോഴും ടാങ്ക് കവിഞ്ഞൊഴുകാറുണ്ട്)', 'വാട്ടർ പമ്പ് ഇല്ല (No Water Pump)'], isElec: true },
+                    { id: 'q8b', m: 'സീലിംഗ് ഫാനുകളുടെ സാങ്കേതികവിദ്യ', e: 'Ceiling Fan Motor Type', o: ['BLDC ഊർജ്ജക്ഷമതയുള്ള ഫാനുകൾ (~28W)', 'സാധാരണ ഫാനുകൾ (~75W Induction Motor)', 'രണ്ടിന്റെയും മിശ്രിതം (Mix of Fans)', 'ഫാനുകൾ ഇല്ല (No Ceiling Fans)'], isElec: true }
                 ]},
-                { id: 'sec4', l: 'Section 4: കുളിർമയും റഫ്രിജറേഷനും', qs: [
-                    { id: 'q9', m: 'റഫ്രിജറേറ്ററിന്റെ (Fridge) സ്റ്റാർ റേറ്റിംഗ്', e: 'Refrigerator Star Rating', o: ['4-Star / 5-Star (Inverter Compressor)', '1-Star to 3-Star (Conventional Compressor)', 'Old Model (>8 years) / Non-Star Rated', 'No Refrigerator'], isElec: true },
-                    { id: 'q10', m: 'എയർ കണ്ടീഷണർ (AC) ഉപയോഗിക്കുന്നുണ്ടോ?', e: 'Air Conditioner Usage', o: ['Yes (Inverter AC)', 'Yes (Non-Inverter AC)', 'No'], isElec: true },
-                    { id: 'q11', m: 'എ.സി (AC) യഥാർത്ഥ താപനില (Temperature Setting)', e: 'AC Temperature Setting', o: ['24°C or above (Optimum efficiency)', 'Below 24°C (High power usage)'], p: 'q10', t: 'Yes', isElec: true },
-                    { id: 'q12', m: 'വെള്ളം ചൂടാക്കാൻ ഉപയോഗിക്കുന്ന രീതി', e: 'Primary Water Heating Method', o: ['Solar Thermal Water Heater', 'Electric Geyser / Immersion Heating Rod', 'LPG Gas / Induction Cooktop', 'Biomass / Firewood', 'None'] }
+                { id: 'sec4', l: 'Section 4: ഫ്രിഡ്ജ്, കൂളിംഗ് & ഹീറ്റിങ് ഉപകരണങ്ങൾ', qs: [
+                    { id: 'q9', m: 'റഫ്രിജറേറ്റർ (Fridge) ഉപയോഗം', e: 'Refrigerator Condition & Star Rating', o: ['4-Star / 5-Star (ഇൻവെർട്ടർ മോഡൽ)', '1-Star to 3-Star (സാധാരണ മോഡൽ)', '8 വർഷത്തിൽ കൂടുതൽ പഴക്കമുള്ള പഴയ മോഡൽ', 'ഫ്രിഡ്ജ് ഇല്ല (No Refrigerator)'], isElec: true },
+                    { id: 'q10', m: 'എയർ കണ്ടീഷണർ (AC) വീട്ടിൽ ഉണ്ടോ?', e: 'Air Conditioner (AC) Usage', o: ['Yes (Inverter AC)', 'Yes (Non-Inverter AC)', 'No'], isElec: true },
+                    { id: 'q11', m: 'എ.സി ഉപയോഗിക്കുമ്പോൾ വെക്കാറുള്ള താപനില', e: 'AC Temperature Setting', o: ['24°C അല്ലെങ്കിൽ അതിൽ കൂടുതൽ (Optimum Cooling)', '24°C ൽ താഴെ തണുപ്പിൽ (High Compressor Load)'], p: 'q10', t: 'Yes', isElec: true },
+                    { id: 'q12', m: 'വെള്ളം ചൂടാക്കാൻ ഉപയോഗിക്കുന്ന രീതി', e: 'Water Heating Method', o: ['സോളാർ വാട്ടർ ഹീറ്റർ', 'വിറക് അടുപ്പ്', 'ഇലക്ട്രിക് ഗെയ്സർ / ഹീറ്റിങ് റോഡ്', 'ഗ്യാസ് സ്റ്റൗ', 'None'] }
                 ]},
                 { id: 'sec5', l: 'Section 5: സോളാർ, ഇലക്ട്രിക് വാഹനങ്ങളും സുരക്ഷയും', qs: [
-                    { id: 'q13', m: 'പ്രധാന പാചക ഇന്ധനം (Cooking Fuel)', e: 'Primary Cooking Energy Source', o: ['LPG Gas', 'Induction Cooktop / Electric Stove', 'Biomass / Firewood', 'Hybrid (Mix of LPG & Electric/Biomass)'] },
-                    { id: 'q14', m: 'ഉപയോഗത്തിലില്ലാത്ത സമയത്ത് ഉപകരണങ്ങൾ സ്വിച്ച് ഓഫ് ചെയ്യാറുണ്ടോ?', e: 'Standby Power Habit', o: ['Switches are turned OFF at socket after use', 'Left on Standby Mode (TV, Set-top Box, Chargers)', 'ബാധകമല്ല (N/A)'], isElec: true },
-                    { id: 'q15', m: 'റൂഫ് ടോപ്പ് സോളാർ പാനൽ (Solar PV) ഉണ്ടോ?', e: 'Rooftop Solar PV Installation', o: ['Yes - Solar PV Installed', 'No - Solar Not Installed'], isElec: true },
-                    { id: 'q15_type', m: 'സോളാർ സിസ്റ്റത്തിന്റെ ടൈപ്പ്', e: 'Solar Connection Topology', o: ['On-Grid System (KSEB Net Metering)', 'Off-Grid System (With Battery Bank)', 'Hybrid System (Grid + Battery)'], p: 'q15', t: 'Yes', isElec: true },
-                    { id: 'q15_capacity', m: 'സോളാർ ശേഷി (kW Capacity)', e: 'Solar Installed Capacity', o: ['1 kW (~4 Units/day)', '2 kW – 3 kW (~8 - 12 Units/day)', '3 kW – 5 kW (~12 - 20 Units/day)', 'Above 5 kW (>20 Units/day)'], p: 'q15', t: 'Yes', isElec: true },
-                    { id: 'q17', m: 'വൈദ്യുതി തടസ്സം നേരിടാനുള്ള സംവിധാനം', e: 'Power Backup Technology', o: ['Solar Hybrid Inverter', 'Standard UPS / Inverter with Battery', 'No Backup System'], isElec: true },
-                    { id: 'q18', m: 'ഇലക്ട്രിക് വാഹനം (EV) ചാർജ്ജ് ചെയ്യാറുണ്ടോ?', e: 'Electric Vehicle (EV) Charging', o: ['അതെ (ഇരുചക്ര വാഹനം - 2 Wheeler)', 'അതെ (കാർ - 4 Wheeler)', 'ഇലക്ട്രിക് വാഹനം ഇല്ല (No EV)'], isElec: true },
-                    { id: 'q16', m: 'ഷോക്കിൽ നിന്നും സംരക്ഷണം നൽകുന്ന ELCB സ്വിച്ച് ഉണ്ടോ?', e: 'Electrical Safety (ELCB/RCCB)', o: ['Installed and working correctly', 'Not installed / Faulty', "Don't Know", 'ബാധകമല്ല (N/A)'], isElec: true }
+                    { id: 'q15', m: 'റൂഫ്‌ടോപ്പ് സോളാർ പാനൽ (Rooftop Solar) ഉണ്ടോ?', e: 'Rooftop Solar PV Installation', o: ['Yes - സോളാർ ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ട്', 'No - സോളാർ ഇൻസ്റ്റാൾ ചെയ്തിട്ടില്ല'], isElec: true },
+                    { id: 'q15_type', m: 'സോളാർ സിസ്റ്റത്തിന്റെ തരം', e: 'Solar Connection Topology', o: ['On-Grid (KSEB ഗ്രിഡ് നെറ്റ് മീറ്ററിംഗ്)', 'Off-Grid (ബാറ്ററി ബാക്കപ്പ് ഉള്ളത്)', 'Hybrid (ഗ്ലിഡ് + ബാറ്ററി)'], p: 'q15', t: 'Yes', isElec: true },
+                    { id: 'q15_capacity', m: 'സോളാർ പ്ലാന്റിന്റെ ശേഷി', e: 'Solar Capacity', o: ['1 kW (~4 Units/day)', '2 kW – 3 kW (~8-12 Units/day)', '3 kW ന് മുകളിൽ (>12 Units/day)'], p: 'q15', t: 'Yes', isElec: true },
+                    { id: 'q17', m: 'വൈദ്യുതി തടസ്സപ്പെടുമ്പോഴുള്ള ബാക്കപ്പ്', e: 'Power Backup Technology', o: ['സോളാർ ഹൈബ്രിഡ് ഇൻവെർട്ടർ', 'സാധാരണ ഇൻവെർട്ടർ / UPS', 'ബാക്കപ്പ് സിസ്റ്റം ഇല്ല'], isElec: true },
+                    { id: 'q18', m: 'ഇലക്ട്രിക് വാഹനം (EV) ഉപയോഗിക്കുന്നുണ്ടോ?', e: 'Electric Vehicle (EV) Usage', o: ['അതെ (ഇരുചക്ര / മുച്ചക്ര വാഹനം)', 'അതെ (കാർ - 4 Wheeler)', 'ഇലക്ട്രിക് വാഹനം ഇല്ല (No EV)'], isElec: true },
+                    { id: 'q16', m: 'ഇലക്ട്രിക് ഷോക്ക് തടയാൻ ELCB/RCCB സ്വിച്ച് ഉണ്ടോ?', e: 'Electrical Safety (ELCB/RCCB)', o: ['ഉണ്ട് (കൃത്യമായി പ്രവർത്തിക്കുന്നു)', 'തകരാറിലായിരിക്കുന്നു / മെയിൻ ബോർഡിൽ ഇല്ല', 'അറിയില്ല (Don\'t Know)', 'ബാധകമല്ല (N/A)'], isElec: true }
                 ]}
             ];
 
@@ -1389,35 +1388,31 @@
                 return { improve, good }; 
             }
 
-            if (s.q4 === 'Mix of LED & CFL / Old Tubelights' || s.q4 === 'Mostly Incandescent (Filament) Bulbs') {
+            if (s.q4 === 'LED ബൾബുകളും പഴയ ട്യൂബ്‌ലൈറ്റുകളും' || s.q4 === 'കൂടുതലും യെല്ലോ/ഫിലമെന്റ് ബൾബുകൾ') {
                 improve.push({ title: "Upgrade to 100% LED", mal: "പഴയ ബൾബുകൾ മാറ്റി 100% എൽ.ഇ.ഡി (LED) ആക്കുക.", eng: "Replace CFLs/Incandescent bulbs with LEDs to save up to 80% lighting energy." });
-            } else if (s.q4 === '100% LED Lighting (High Efficacy)') {
+            } else if (s.q4 === '100% LED ലൈറ്റുകൾ (Fully LED Lighting)') {
                 good.push({ title: "High Efficacy Lighting", mal: "100% എൽ.ഇ.ഡി ഉപയോഗിക്കുന്നത് മാതൃകാപരമാണ്.", eng: "100% LED setup optimizes lighting efficiency and reduces heat emissions." });
             }
 
-            if (s.q7 === 'Conventional Induction Motor Fans (~75W)' || s.q7 === 'Mix of BLDC and Conventional Fans') {
+            if (s.q8b === 'സാധാരണ ഫാനുകൾ (~75W Induction Motor)' || s.q8b === 'രണ്ടിന്റെയും മിശ്രിതം (Mix of Fans)') {
                 improve.push({ title: "Transition to BLDC Fans", mal: "സാധാരണ ഫാനുകൾ മാറ്റി ഊർജ്ജക്ഷമതയുള്ള BLDC ഫാനുകൾ ഉപയോഗിക്കുക.", eng: "BLDC motor fans consume ~28W compared to 75W induction fans." });
-            } else if (s.q7 === 'Energy-efficient BLDC Motor Fans (~28W)') {
+            } else if (s.q8b === 'BLDC ഊർജ്ജക്ഷമതയുള്ള ഫാനുകൾ (~28W)') {
                 good.push({ title: "Efficient Motor Technology", mal: "BLDC ഫാനുകൾ ഉപയോഗിക്കുന്നത് സ്വാഗതാർഹമാണ്.", eng: "BLDC motor adoption cuts fan power consumption by over 60%." });
             }
 
-            if (s.q8 === 'മാനുവൽ സ്വിച്ച് — പലപ്പോഴും ടാങ്ക് കവിഞ്ഞൊഴുകാറുണ്ട്') {
+            if (s.q8 === 'മാനുവൽ സ്വിച്ച് (പലപ്പോഴും ടാങ്ക് കവിഞ്ഞൊഴുകാറുണ്ട്)') {
                 improve.push({ title: "Install Water Level Switch", mal: "മോട്ടോർ ടാങ്ക് അലാറം/ഓട്ടോമാറ്റിക് കട്ട്-ഓഫ് സ്ഥാപിക്കുക.", eng: "Prevent water motor overflows to conserve both electric energy and water." });
             }
 
-            if (s.q8b === 'ദിവസവും ഉപയോഗിക്കുന്നു (High Thermal Load)') {
-                improve.push({ title: "Optimize Thermal Loads", mal: "അയൺ ബോക്സ്, വാഷിംഗ് മെഷീൻ എന്നിവ ആഴ്ചയിൽ ഒന്നിച്ചാക്കി ഉപയോഗിക്കുന്നത് വൈദ്യുതി ലാഭിക്കാൻ സഹായിക്കും.", eng: "Group ironing and laundry to reduce frequent high-wattage heating cycles." });
-            }
-
-            if (s.q14 === 'Left on Standby Mode (TV, Set-top Box, Chargers)') {
+            if (s.q6 === 'ഡിവിഡി/ടിവി കാണാത്തപ്പോഴും പ്ലഗിൽ ഇട്ടിരിക്കാറുണ്ട് (Standby Loss)') {
                 improve.push({ title: "Eliminate Standby Power Loss", mal: "ഉപകരണങ്ങൾ ഉപയോഗ ശേഷം വാൾ സോക്കറ്റ് സ്വിച്ച് ഓഫ് ചെയ്യുക.", eng: "Phantom power consumption on standby mode adds up over time." });
             }
 
-            if (s.q11 === 'Below 24°C (High power usage)') {
+            if (s.q11 === '24°C ൽ താഴെ തണുപ്പിൽ (High Compressor Load)') {
                 improve.push({ title: "Set AC Temp to 24°C+", mal: "എ.സി താപനില 24°C ലേക്ക് ക്രമീകരിക്കുക.", eng: "Setting AC to 24°C reduces compressor work cycle and saves up to 24% electricity." });
             }
 
-            if (s.q16 === 'Not installed / Faulty' || s.q16 === "Don't Know") {
+            if (s.q16 === 'തകരാറിലായിരിക്കുന്നു / മെയിൻ ബോർഡിൽ ഇല്ല' || s.q16 === 'അറിയില്ല (Don\'t Know)') {
                 improve.push({ title: "Install ELCB Safety Switch", mal: "ഉടൻ തന്നെ മെയിൻ ബോർഡിൽ ELCB സേഫ്റ്റി സ്വിച്ച് ഇൻസ്റ്റാൾ ചെയ്യുക.", eng: "Crucial for shock protection and preventing ground electrical leakage." });
             }
 
@@ -1425,7 +1420,7 @@
                 good.push({ title: "Electric Vehicle (EV) Adoption", mal: "ഇലക്ട്രിക് വാഹനം ഉപയോഗിക്കുന്നത് അന്തരീക്ഷ മലിനീകരണം കുറയ്ക്കുന്നു.", eng: "EV adoption reduces carbon emissions. Try charging during off-peak night hours." });
             }
 
-            if (s.q15 === 'Yes - Solar PV Installed') {
+            if (s.q15 === 'Yes - സോളാർ ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ട്') {
                 good.push({ title: "Rooftop Solar PV Generator", mal: "സോളാർ എനർജി സിസ്റ്റം ഉപയോഗിക്കുന്നത് തികച്ചും അഭിനന്ദനാർഹമാണ്.", eng: `Solar PV System installed (${s.q15_capacity || 'Installed'}) reduces grid dependence.` });
             }
 
@@ -1438,10 +1433,10 @@
             let annualCo2 = 0;
 
             if (s.q1 !== 'ഇലക്ട്രിസിറ്റി ഇല്ല (No Electrical Connection)') {
-                if(s.q2 === 'Below 100 Units') bimonthlyUnits = 80;
-                else if(s.q2 === '100 – 200 Units') bimonthlyUnits = 160;
-                else if(s.q2 === '200 – 400 Units') bimonthlyUnits = 300;
-                else if(s.q2 === 'Above 400 Units') bimonthlyUnits = 500;
+                if(s.q2 === 'Below ₹500 (വളരെ കുറഞ്ഞ ഉപയോഗം)') bimonthlyUnits = 80;
+                else if(s.q2 === '₹500 – ₹1500 (സാധാരണ ഉപയോഗം)') bimonthlyUnits = 160;
+                else if(s.q2 === '₹1500 – ₹3000 (കൂടുതൽ ഉപയോഗം)') bimonthlyUnits = 300;
+                else if(s.q2 === 'Above ₹3000 (ഉയർന്ന ഉപയോഗം)') bimonthlyUnits = 500;
                 
                 estKsebBill = calculateKsebBimonthlyBill(bimonthlyUnits);
                 annualCo2 = Math.round(bimonthlyUnits * 6 * 0.72);
@@ -1520,7 +1515,7 @@
                             <div class="border border-slate-300 print:border-slate-800 rounded-b-md print:rounded-none overflow-hidden">
                                 ${head('ELECTRICAL CONNECTION & LOAD')}
                                 ${row('GRID CONNECTION', s.q1)}
-                                ${row('BI-MONTHLY LOAD', s.q2)}
+                                ${row('BI-MONTHLY BILL RANGE', s.q2)}
                                 ${row('ROOF CONSTRUCTION', s.q3, true)}
                             </div>
                             
@@ -1528,14 +1523,14 @@
                                 ${head('LIGHTING EFFICIENCY')}
                                 ${row('LIGHTING TECH', s.q4)}
                                 ${row('DAYLIGHTING USE', s.q5)}
-                                ${row('OUTDOOR LIGHTS', s.q6, true)}
+                                ${row('STANDBY POWER HABIT', s.q6, true)}
                             </div>
 
                             <div class="border border-slate-300 print:border-slate-800 rounded-b-md print:rounded-none overflow-hidden">
-                                ${head('MOTORS & HEAVY APPLIANCES')}
-                                ${row('CEILING FAN MOTOR', s.q7)}
+                                ${head('COOKING, PUMP & FANS')}
+                                ${row('PRIMARY COOKING FUEL', s.q7)}
                                 ${row('PUMP SENSOR SWITCH', s.q8)}
-                                ${row('HEAVY THERMAL LOADS', s.q8b, true)}
+                                ${row('CEILING FAN TECH', s.q8b, true)}
                             </div>
                         </div>
                         
@@ -1556,8 +1551,6 @@
                                 ${row('SOLAR CAPACITY', s.q15_capacity || 'N/A')}
                                 ${row('INVERTER BACKUP TECH', s.q17)}
                                 ${row('EV CHARGING (HOME)', s.q18)}
-                                ${row('COOKING FUEL', s.q13)}
-                                ${row('STANDBY POWER HABIT', s.q14)}
                                 ${row('SAFETY SWITCH (ELCB)', s.q16, true)}
                             </div>
                         </div>
@@ -1656,11 +1649,12 @@
                 docContent += `Ward #: ${s.wardNo || 'N/A'} | House ID: ${s.houseNo || 'N/A'}\n`;
                 docContent += `Members Count: ${s.membersCount || 'N/A'}\n`;
                 docContent += `Grid Connection: ${s.q1 || 'N/A'}\n`;
-                docContent += `Bi-monthly kWh Load: ${s.q2 || 'N/A'}\n`;
+                docContent += `Bi-monthly Bill Range: ${s.q2 || 'N/A'}\n`;
                 docContent += `Lighting Technology: ${s.q4 || 'N/A'}\n`;
-                docContent += `Ceiling Fan Motor: ${s.q7 || 'N/A'}\n`;
+                docContent += `Standby Power Habit: ${s.q6 || 'N/A'}\n`;
+                docContent += `Primary Cooking Fuel: ${s.q7 || 'N/A'}\n`;
                 docContent += `Water Pump Control: ${s.q8 || 'N/A'}\n`;
-                docContent += `Heavy Thermal Loads: ${s.q8b || 'N/A'}\n`;
+                docContent += `Ceiling Fan Motor: ${s.q8b || 'N/A'}\n`;
                 docContent += `Refrigerator Rating: ${s.q9 || 'N/A'}\n`;
                 docContent += `AC Usage: ${s.q10 || 'N/A'}\n`;
                 docContent += `AC Temperature Setting: ${s.q11 || 'N/A'}\n`;
@@ -1690,19 +1684,18 @@
             headName: "Head of Household",
             membersCount: "Total Members",
             q1: "Electrical Grid Connection",
-            q2: "Bi-monthly Energy Consumption (kWh)",
+            q2: "Bi-monthly Bill Range",
             q3: "Building Roof Architecture",
             q4: "Primary Lighting Tech",
             q5: "Daylighting Use",
-            q6: "Daytime Outdoor Lights Management",
-            q7: "Ceiling Fan Motor Tech",
+            q6: "Standby Power Loss Habit",
+            q7: "Primary Cooking Fuel",
             q8: "Water Pump Motor Sensor",
-            q8b: "Heavy Thermal Loads (Iron/Washer)",
+            q8b: "Ceiling Fan Motor Tech",
             q9: "Refrigerator Rating & Tech",
             q10: "AC Usage",
             q11: "AC Temperature Setting",
             q12: "Water Heating Method",
-            q13: "Primary Cooking Fuel",
             q14: "Standby Loss Habit",
             q15: "Rooftop Solar PV Status",
             q15_type: "Solar Connection Topology",
@@ -1783,7 +1776,7 @@
             document.querySelectorAll('[data-parent]').forEach(el => el.classList.add('hidden'));
             
             const btn = document.getElementById('submit-btn');
-            if(btn) btn.innerHTML = '<i class="fa-solid fa-cloud-arrow-up text-base text-amber-400"></i> NSS ക്ലൗഡ് സെർവറിലേക്ക് അയക്കുക';
+            if(btn) btn.innerHTML = '<i class="fa-solid fa-cloud-arrow-up text-lg text-amber-400"></i> NSS ക്ലൗഡ് സെർവറിലേക്ക് അയക്കുക';
             editModeId = null;
         }
 
@@ -1808,4 +1801,3 @@
     </script>
 </body>
 </html>
-
