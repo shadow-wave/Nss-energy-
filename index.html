@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="theme-color" content="#0f172a">
+    <meta name="theme-color" content="#0b132b">
     <meta name="format-detection" content="telephone=no">
     <link rel="apple-touch-icon" href="college_logo.png">
-    <title>NSS മാനസഗ്രാമം ഊർജ്ജ ഓഡിറ്റ് | MG College Iritty</title>
+    <title>NSS Units 30 & 63 മാനസഗ്രാമം ഊർജ്ജ ഓഡിറ്റ് | MG College Iritty</title>
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -20,8 +20,9 @@
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
         
         :root {
-            --nss-navy: #0f172a;
-            --nss-blue: #0284c7;
+            --nss-navy: #0b132b;
+            --nss-blue: #1e3a8a;
+            --nss-red: #b91c1c;
             --nss-gold: #d97706;
             --safe-area-top: env(safe-area-inset-top, 0px);
             --safe-area-bottom: env(safe-area-inset-bottom, 0px);
@@ -30,7 +31,7 @@
         body { 
             font-family: 'Plus Jakarta Sans', sans-serif; 
             -webkit-tap-highlight-color: transparent;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0284c7 100%);
+            background: linear-gradient(135deg, #0b132b 0%, #1e293b 40%, #450a0a 100%);
             background-attachment: fixed;
             overscroll-behavior-y: contain;
             user-select: none;
@@ -41,65 +42,66 @@
 
         input { font-size: 16px !important; touch-action: manipulation; }
 
-        .safe-pt { padding-top: calc(var(--safe-area-top) + 14px); }
-        .safe-pb { padding-bottom: calc(var(--safe-area-bottom) + 14px); }
-        .header-spacing { padding-top: calc(var(--safe-area-top) + 115px); }
-        .nav-spacing { padding-bottom: calc(var(--safe-area-bottom) + 95px); }
+        .safe-pt { padding-top: calc(var(--safe-area-top) + 12px); }
+        .safe-pb { padding-bottom: calc(var(--safe-area-bottom) + 12px); }
+        .header-spacing { padding-top: calc(var(--safe-area-top) + 112px); }
+        .nav-spacing { padding-bottom: calc(var(--safe-area-bottom) + 92px); }
 
-        /* Liquid Glass Card Styling */
+        /* Premium NSS Glass Cards */
         .glass-card {
-            background: rgba(255, 255, 255, 0.88);
+            background: rgba(255, 255, 255, 0.92);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.6);
-            box-shadow: 0 12px 32px 0 rgba(15, 23, 42, 0.08);
+            box-shadow: 0 10px 30px 0 rgba(11, 19, 43, 0.12);
         }
 
         .glass-card-dark {
-            background: rgba(15, 23, 42, 0.85);
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 58, 138, 0.9) 100%);
             backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            box-shadow: 0 16px 40px 0 rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 16px 36px 0 rgba(0, 0, 0, 0.3);
         }
 
         .nav-blur {
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(24px);
-            -webkit-backdrop-filter: blur(24px);
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
         }
 
         .nav-item { color: #64748b; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        .nav-item.nav-active { color: #0284c7; }
-        .nav-item.nav-active i { transform: translateY(-3px) scale(1.15); color: #0284c7; }
+        .nav-item.nav-active { color: #b91c1c; }
+        .nav-item.nav-active i { transform: translateY(-3px) scale(1.15); color: #b91c1c; }
         .nav-item .nav-dot { opacity: 0; transform: translateY(4px); transition: all 0.3s; }
         .nav-item.nav-active .nav-dot { opacity: 1; transform: translateY(0); }
 
         .radio-tile-group input:checked + .radio-tile {
-            border-color: #0284c7 !important;
-            background: rgba(240, 249, 255, 0.95) !important;
-            box-shadow: 0 6px 20px rgba(2, 132, 199, 0.18);
+            border-color: #b91c1c !important;
+            background: rgba(254, 242, 242, 0.95) !important;
+            box-shadow: 0 6px 18px rgba(185, 28, 28, 0.15);
             transform: scale(0.985);
         }
         .radio-tile-group input:checked + .radio-tile .check-icon { display: flex; }
 
         @keyframes slideIn {
-            from { opacity: 0; transform: translateY(16px) scale(0.98); }
+            from { opacity: 0; transform: translateY(14px) scale(0.98); }
             to { opacity: 1; transform: translateY(0) scale(1); }
         }
-        .animate-view { animation: slideIn 0.38s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        .animate-view { animation: slideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
 
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
+        /* Strict A4 Page Fitting for PDF & Print */
         @media print {
             .print-hidden { display: none !important; }
             html, body { 
                 background: white !important; 
                 padding: 0 !important; 
                 margin: 0 !important; 
-                height: auto !important; 
-                width: auto !important;
+                height: 100% !important; 
+                width: 100% !important;
                 overflow: visible !important; 
             }
             main, #view-report, #report-canvas {
@@ -114,13 +116,14 @@
             }
             .a4-print-container {
                 width: 100% !important;
-                height: auto !important; 
-                min-height: 100vh !important;
+                max-width: 210mm !important;
+                height: 285mm !important; 
+                max-height: 285mm !important;
                 overflow: hidden !important;
                 page-break-after: always;
                 page-break-inside: avoid;
                 box-sizing: border-box;
-                padding: 10mm 15mm !important;
+                padding: 8mm 12mm !important;
                 margin: 0 auto !important;
                 border: none !important;
                 box-shadow: none !important;
@@ -134,41 +137,42 @@
 </head>
 <body class="flex flex-col overflow-hidden">
 
+    <!-- App Splash Loader -->
     <div id="loader" class="fixed inset-0 bg-slate-950 z-[200] flex flex-col items-center justify-center p-8 transition-opacity duration-700 text-white">
-        <div class="flex items-center gap-4 mb-6">
-            <div class="w-18 h-18 bg-white/95 rounded-2xl flex items-center justify-center shadow-2xl p-2 backdrop-blur-md">
+        <div class="flex items-center gap-4 mb-5">
+            <div class="w-16 h-16 bg-white/95 rounded-2xl flex items-center justify-center shadow-2xl p-1.5 backdrop-blur-md">
                 <img src="college_logo.png" onerror="this.style.display='none'" class="w-full h-full object-contain">
             </div>
-            <div class="w-18 h-18 bg-white/95 rounded-2xl flex items-center justify-center shadow-2xl p-2 border-2 border-amber-400 backdrop-blur-md">
+            <div class="w-16 h-16 bg-white/95 rounded-2xl flex items-center justify-center shadow-2xl p-1.5 border-2 border-amber-400 backdrop-blur-md">
                 <img src="nss_logo.png" onerror="this.style.display='none'" class="w-full h-full object-contain">
             </div>
         </div>
-        <h1 class="text-3xl font-black tracking-tight mb-1 text-center uppercase bg-gradient-to-r from-amber-300 via-sky-200 to-white bg-clip-text text-transparent">NSS ഗ്രാമ ഊർജ്ജ ഓഡിറ്റ്</h1>
-        <p class="text-xs font-black text-amber-400 tracking-[0.25em] uppercase mb-1 text-center">National Service Scheme (NSS)</p>
-        <p class="text-[10px] font-bold text-sky-200 tracking-widest uppercase mb-10 text-center">Mahatma Gandhi College Iritty • NOT ME BUT YOU</p>
+        <h1 class="text-3xl font-black tracking-tight mb-1 text-center uppercase bg-gradient-to-r from-amber-300 via-rose-200 to-white bg-clip-text text-transparent">NSS ഗ്രാമ ഊർജ്ജ ഓഡിറ്റ്</h1>
+        <p class="text-xs font-black text-amber-400 tracking-[0.2em] uppercase mb-1 text-center">NSS UNITS 30 & 63</p>
+        <p class="text-[10px] font-bold text-sky-200 tracking-widest uppercase mb-8 text-center">Mahatma Gandhi College Iritty • NOT ME BUT YOU</p>
         
         <div class="relative w-10 h-10">
             <div class="absolute inset-0 border-4 border-white/20 rounded-full"></div>
-            <div class="absolute inset-0 border-4 border-amber-400 rounded-full border-t-transparent animate-spin"></div>
+            <div class="absolute inset-0 border-4 border-red-500 rounded-full border-t-transparent animate-spin"></div>
         </div>
-        <p id="loader-status" class="mt-6 text-[10px] font-black text-sky-200 uppercase tracking-[0.3em] animate-pulse">Connecting Cloud Database...</p>
+        <p id="loader-status" class="mt-6 text-[10px] font-black text-amber-300 uppercase tracking-[0.3em] animate-pulse">Connecting Cloud Database...</p>
     </div>
 
     <!-- Custom Alert Dialog -->
     <div id="custom-alert" class="hidden fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[300] flex items-center justify-center p-6 print-hidden">
-        <div class="glass-card rounded-[32px] p-6 max-w-sm w-full text-center border border-white/40 shadow-2xl animate-view">
-            <div id="custom-alert-icon" class="w-16 h-16 bg-sky-50 text-sky-600 rounded-[22px] flex items-center justify-center mx-auto mb-4 shadow-inner">
+        <div class="glass-card rounded-[32px] p-6 max-w-sm w-full text-center border border-white/50 shadow-2xl animate-view">
+            <div id="custom-alert-icon" class="w-16 h-16 bg-red-50 text-red-600 rounded-[22px] flex items-center justify-center mx-auto mb-4 shadow-inner">
                 <i class="fa-solid fa-bell text-2xl"></i>
             </div>
             <h3 id="custom-alert-title" class="text-base font-black text-slate-800 mb-1.5">Notification</h3>
             <p id="custom-alert-msg" class="text-xs text-slate-500 font-medium leading-relaxed mb-6">Message content.</p>
-            <button onclick="closeCustomAlert()" class="w-full py-3.5 bg-slate-900 text-white rounded-[20px] text-xs font-black uppercase tracking-wider hover:bg-black active:scale-95 transition shadow-lg">Okay</button>
+            <button onclick="closeCustomAlert()" class="w-full py-3.5 bg-red-700 text-white rounded-[20px] text-xs font-black uppercase tracking-wider hover:bg-red-800 active:scale-95 transition shadow-lg shadow-red-200">Okay</button>
         </div>
     </div>
 
     <!-- Custom Confirm Dialog -->
     <div id="custom-confirm" class="hidden fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[300] flex items-center justify-center p-6 print-hidden">
-        <div class="glass-card rounded-[32px] p-6 max-w-sm w-full text-center border border-white/40 shadow-2xl animate-view">
+        <div class="glass-card rounded-[32px] p-6 max-w-sm w-full text-center border border-white/50 shadow-2xl animate-view">
             <div class="w-16 h-16 bg-amber-50 text-amber-500 rounded-[22px] flex items-center justify-center mx-auto mb-4 shadow-inner">
                 <i class="fa-solid fa-triangle-exclamation text-2xl"></i>
             </div>
@@ -181,6 +185,7 @@
         </div>
     </div>
 
+    <!-- App Header -->
     <header class="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-slate-200/60 safe-pt print-hidden">
         <div class="px-4 py-3 flex items-center justify-between max-w-xl mx-auto">
             <div class="flex items-center gap-2.5">
@@ -188,7 +193,7 @@
                 <img src="nss_logo.png" onerror="this.style.display='none'" class="w-9 h-9 rounded-[12px] shadow-sm bg-white p-0.5 object-contain border-2 border-amber-400">
                 <div>
                     <h1 class="text-[13px] font-black tracking-wide text-slate-900 leading-none uppercase">NSS Grama Energy Audit</h1>
-                    <p class="text-[8px] font-extrabold text-amber-600 mt-0.5 uppercase tracking-wider">MG College Iritty • NOT ME BUT YOU</p>
+                    <p class="text-[8px] font-extrabold text-red-700 mt-0.5 uppercase tracking-wider">Units 30 & 63 • MG College Iritty</p>
                 </div>
             </div>
             <div class="flex items-center gap-2">
@@ -208,6 +213,7 @@
         </div>
     </header>
 
+    <!-- Main Scroll Body -->
     <main id="main-scroll" class="flex-grow overflow-y-auto no-scrollbar header-spacing nav-spacing relative w-full h-full print:h-auto print:overflow-visible print:block print:p-0 print:m-0">
         
         <!-- DASHBOARD VIEW -->
@@ -215,15 +221,15 @@
             
             <!-- Hero NSS Grama Summary Card -->
             <div class="glass-card-dark rounded-[32px] p-6 text-white relative overflow-hidden border border-white/10 shadow-2xl">
-                <div class="absolute -right-8 -bottom-8 w-44 h-44 bg-amber-500/10 rounded-full blur-2xl"></div>
-                <div class="absolute -left-8 -top-8 w-44 h-44 bg-sky-500/10 rounded-full blur-2xl"></div>
+                <div class="absolute -right-8 -bottom-8 w-44 h-44 bg-red-600/15 rounded-full blur-2xl"></div>
+                <div class="absolute -left-8 -top-8 w-44 h-44 bg-amber-500/15 rounded-full blur-2xl"></div>
                 
                 <div class="relative z-10">
                     <div class="flex justify-between items-start mb-6">
                         <div>
-                            <span class="text-[9px] font-black bg-amber-400 text-slate-900 px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">NSS Grama Survey</span>
+                            <span class="text-[9px] font-black bg-amber-400 text-slate-900 px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">NSS Units 30 & 63</span>
                             <h2 id="stat-total" class="text-4xl font-black tracking-tight mt-2 text-white">0</h2>
-                            <p class="text-[10px] font-bold text-sky-200 uppercase tracking-widest mt-0.5">പൂർത്തിയാക്കിയ കുടുംബ സർവേകൾ</p>
+                            <p class="text-[10px] font-bold text-amber-200 uppercase tracking-widest mt-0.5">പൂർത്തിയാക്കിയ കുടുംബ സർവേകൾ</p>
                         </div>
                         <button onclick="copyReportSummary()" class="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-[20px] flex items-center justify-center active:scale-90 transition backdrop-blur-md border border-white/15 shadow-lg" title="Share WhatsApp Summary">
                             <i class="fa-brands fa-whatsapp text-xl text-emerald-400"></i>
@@ -250,17 +256,17 @@
             <!-- Village Electricity & Carbon Analytics Card -->
             <div class="glass-card rounded-[32px] p-5 border border-white/60">
                 <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-[10px] font-black text-amber-600 uppercase tracking-[0.2em] flex items-center gap-2">
-                        <i class="fa-solid fa-leaf text-emerald-500 text-sm"></i> ഗ്രാമീണ വൈദ്യുതി ഉപയോഗവും കാർബൺ അളവും
+                    <h3 class="text-[10px] font-black text-red-700 uppercase tracking-[0.2em] flex items-center gap-2">
+                        <i class="fa-solid fa-leaf text-emerald-600 text-sm"></i> ഗ്രാമീണ വൈദ്യുതി ഉപയോഗവും കാർബൺ അളവും
                     </h3>
-                    <span class="text-[8px] bg-emerald-500/10 text-emerald-700 border border-emerald-200 px-2.5 py-0.5 rounded-full font-extrabold uppercase tracking-wider">Green NSS</span>
+                    <span class="text-[8px] bg-red-50 text-red-700 border border-red-200 px-2.5 py-0.5 rounded-full font-black uppercase tracking-wider">Green NSS</span>
                 </div>
                 
                 <div class="grid grid-cols-2 gap-3">
                     <div class="bg-slate-50/80 p-4 rounded-[22px] border border-slate-100">
                         <p class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">വാർഷിക ഉപയോഗം</p>
-                        <p class="text-2xl font-black text-sky-600 mt-0.5"><span id="stat-est-kwh">0</span> <span class="text-[10px] font-normal text-slate-400">kWh/yr</span></p>
-                        <p class="text-[8px] text-sky-700/80 mt-0.5 font-semibold">സർവേ ചെയ്ത ആകെ തുക</p>
+                        <p class="text-2xl font-black text-blue-900 mt-0.5"><span id="stat-est-kwh">0</span> <span class="text-[10px] font-normal text-slate-400">kWh/yr</span></p>
+                        <p class="text-[8px] text-blue-700/80 mt-0.5 font-semibold">സർവേ ചെയ്ത ആകെ തുക</p>
                     </div>
                     <div class="bg-slate-50/80 p-4 rounded-[22px] border border-slate-100">
                         <p class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">കാർബൺ അളവ് (CO₂)</p>
@@ -274,7 +280,7 @@
                         <p class="text-[9px] font-extrabold text-amber-900 uppercase tracking-wider">കണക്കാക്കിയ KSEB ബിൽ തുക</p>
                         <p class="text-[9px] text-amber-700/80 font-semibold">LT-1A ഗാർഹിക നിരക്കിൽ</p>
                     </div>
-                    <p class="text-xl font-black text-amber-600">₹<span id="stat-est-kseb-bill">0</span></p>
+                    <p class="text-xl font-black text-red-700">₹<span id="stat-est-kseb-bill">0</span></p>
                 </div>
             </div>
 
@@ -288,13 +294,13 @@
                         <p id="stat-led" class="text-lg font-black text-amber-600">0%</p>
                         <p class="text-[8px] font-extrabold text-amber-700 uppercase mt-1 tracking-wider">100% LED ബൾബുകൾ</p>
                     </div>
-                    <div class="bg-cyan-50/80 rounded-[20px] p-3 text-center border border-cyan-100">
-                        <p id="stat-bldc" class="text-lg font-black text-cyan-600">0%</p>
-                        <p class="text-[8px] font-extrabold text-cyan-700 uppercase mt-1 tracking-wider">BLDC ഫാനുകൾ</p>
+                    <div class="bg-blue-50/80 rounded-[20px] p-3 text-center border border-blue-100">
+                        <p id="stat-bldc" class="text-lg font-black text-blue-700">0%</p>
+                        <p class="text-[8px] font-extrabold text-blue-800 uppercase mt-1 tracking-wider">BLDC ഫാനുകൾ</p>
                     </div>
-                    <div class="bg-indigo-50/80 rounded-[20px] p-3 text-center border border-indigo-100">
-                        <p id="stat-ev" class="text-lg font-black text-indigo-600">0</p>
-                        <p class="text-[8px] font-extrabold text-indigo-700 uppercase mt-1 tracking-wider">EV വാഹനങ്ങൾ</p>
+                    <div class="bg-red-50/80 rounded-[20px] p-3 text-center border border-red-100">
+                        <p id="stat-ev" class="text-lg font-black text-red-600">0</p>
+                        <p class="text-[8px] font-extrabold text-red-700 uppercase mt-1 tracking-wider">EV വാഹനങ്ങൾ</p>
                     </div>
                 </div>
             </div>
@@ -302,25 +308,25 @@
             <!-- Energy Loss and Connection Factor Bars -->
             <div class="glass-card rounded-[32px] p-5 border border-white/60">
                 <h3 class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-4 flex items-center gap-2">
-                    <i class="fa-solid fa-chart-pie text-sky-500 text-sm"></i> സാധാരണ വൈദ്യുതി അപചയങ്ങൾ
+                    <i class="fa-solid fa-chart-pie text-red-600 text-sm"></i> സാധാരണ വൈദ്യുതി അപചയങ്ങൾ
                 </h3>
                 <div id="risk-bars" class="space-y-3.5 mb-6">
-                    <!-- Populated via JS -->
+                    <!-- JS Populated -->
                 </div>
 
                 <h3 class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-4 mt-6 flex items-center gap-2 border-t border-slate-100 pt-5">
-                    <i class="fa-solid fa-plug text-indigo-500 text-sm"></i> KSEB കണക്ഷൻ തരം
+                    <i class="fa-solid fa-plug text-blue-800 text-sm"></i> KSEB കണക്ഷൻ തരം
                 </h3>
                 <div id="source-bars" class="space-y-3.5">
-                    <!-- Populated via JS -->
+                    <!-- JS Populated -->
                 </div>
             </div>
 
             <!-- Data Export Toolbar -->
             <div class="flex gap-3 overflow-x-auto no-scrollbar pb-1 pt-1 -mx-4 px-4 snap-x">
                 <button onclick="manualSyncTrigger()" class="snap-start shrink-0 w-32 glass-card p-3.5 rounded-[22px] flex flex-col items-start gap-2.5 active:scale-95 transition">
-                    <div class="w-9 h-9 bg-sky-600 text-white rounded-[14px] flex items-center justify-center shadow-md shadow-sky-200"><i class="fa-solid fa-rotate text-sm"></i></div>
-                    <div class="text-left"><p class="text-xs font-extrabold text-sky-900">Sync Server</p><p class="text-[8px] font-bold text-sky-600 uppercase" id="tool-sync-status">Connected</p></div>
+                    <div class="w-9 h-9 bg-blue-900 text-white rounded-[14px] flex items-center justify-center shadow-md shadow-blue-200"><i class="fa-solid fa-rotate text-sm"></i></div>
+                    <div class="text-left"><p class="text-xs font-extrabold text-blue-950">Sync Server</p><p class="text-[8px] font-bold text-blue-700 uppercase" id="tool-sync-status">Connected</p></div>
                 </button>
                 <button onclick="exportCSV()" class="snap-start shrink-0 w-32 glass-card p-3.5 rounded-[22px] flex flex-col items-start gap-2.5 active:scale-95 transition">
                     <div class="w-9 h-9 bg-emerald-600 text-white rounded-[14px] flex items-center justify-center shadow-md shadow-emerald-200"><i class="fa-solid fa-file-csv text-sm"></i></div>
@@ -335,8 +341,8 @@
                     <div class="text-left"><p class="text-xs font-extrabold text-purple-900">JSON Data</p><p class="text-[8px] font-bold text-purple-600 uppercase">Raw Export</p></div>
                 </button>
                 <button id="admin-export-pdf-btn" onclick="exportPDF()" class="hidden snap-start shrink-0 w-32 glass-card p-3.5 rounded-[22px] flex-col items-start gap-2.5 active:scale-95 transition border-rose-200">
-                    <div class="w-9 h-9 bg-rose-600 text-white rounded-[14px] flex items-center justify-center shadow-md shadow-rose-200"><i class="fa-solid fa-print text-sm"></i></div>
-                    <div class="text-left"><p class="text-xs font-extrabold text-rose-900">Batch Print</p><p class="text-[8px] font-bold text-rose-600 uppercase">Print All Audits</p></div>
+                    <div class="w-9 h-9 bg-red-700 text-white rounded-[14px] flex items-center justify-center shadow-md shadow-red-200"><i class="fa-solid fa-print text-sm"></i></div>
+                    <div class="text-left"><p class="text-xs font-extrabold text-red-950">Batch Print</p><p class="text-[8px] font-bold text-red-600 uppercase">Print All Audits</p></div>
                 </button>
             </div>
 
@@ -346,12 +352,12 @@
                     <h3 class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] flex items-center gap-2">
                         <i class="fa-solid fa-medal text-amber-500 text-sm"></i> active NSS വോളന്റിയർമാർ
                     </h3>
-                    <div class="bg-amber-50 text-amber-600 border border-amber-100 px-2.5 py-0.5 rounded-full text-[8px] font-black uppercase tracking-wider">
+                    <div class="bg-red-50 text-red-700 border border-red-100 px-2.5 py-0.5 rounded-full text-[8px] font-black uppercase tracking-wider">
                         <span id="total-volunteers-count">0</span> Active
                     </div>
                 </div>
                 <div id="volunteer-leaderboard" class="space-y-2">
-                    <!-- Populated via JS -->
+                    <!-- JS Populated -->
                 </div>
             </div>
 
@@ -364,18 +370,18 @@
                 </div>
                 <p class="text-[10px] text-slate-500 font-medium mb-3 leading-relaxed">ഒരേ വോളന്റിയർ ഒരേ വീട്ടുടമയുടെ പേരിൽ ഒന്നിനു മീതെ സമർപ്പിച്ച ഡാറ്റ.</p>
                 <div id="admin-duplicates-list" class="space-y-2.5 max-h-[350px] overflow-y-auto no-scrollbar pb-1">
-                    <!-- Populated via JS -->
+                    <!-- JS Populated -->
                 </div>
             </div>
 
             <!-- Search and Household List -->
             <div class="space-y-3 pb-2">
                 <div class="relative group">
-                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-sky-600 transition-colors text-sm"></i>
-                    <input type="text" id="search-input" oninput="renderDashboard()" placeholder="വീട്ടുടമയുടെ പേര്, ഹൗസ് നമ്പർ, വോളന്റിയർ തിരയുക..." class="w-full pl-11 pr-5 py-3.5 glass-card rounded-[22px] text-xs focus:ring-4 focus:ring-sky-500/10 outline-none transition-all font-medium border border-white/80">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-red-700 transition-colors text-sm"></i>
+                    <input type="text" id="search-input" oninput="renderDashboard()" placeholder="വീട്ടുടമയുടെ പേര്, ഹൗസ് നമ്പർ, വോളന്റിയർ തിരയുക..." class="w-full pl-11 pr-5 py-3.5 glass-card rounded-[22px] text-xs focus:ring-4 focus:ring-red-500/10 outline-none transition-all font-medium border border-white/80">
                 </div>
                 <div id="audit-list" class="space-y-2.5">
-                    <!-- Populated via JS -->
+                    <!-- JS Populated -->
                 </div>
             </div>
         </div>
@@ -389,9 +395,9 @@
                     <i class="fa-solid fa-cloud-arrow-up text-3xl text-amber-400"></i>
                 </div>
                 <h2 class="text-2xl font-black mb-1.5 uppercase tracking-tight text-center">സർവേ സേവ് ചെയ്തു</h2>
-                <p id="success-subtext" class="text-sky-200 text-center text-xs font-medium opacity-90 leading-relaxed">NSS ക്ലൗഡ് സെർവറിലേക്ക് വിവരങ്ങൾ അയക്കുന്നു...</p>
+                <p id="success-subtext" class="text-amber-200 text-center text-xs font-medium opacity-90 leading-relaxed">NSS ക്ലൗഡ് സെർവറിലേക്ക് വിവരങ്ങൾ അയക്കുന്നു...</p>
                 <div class="mt-8 w-20 h-1 bg-white/20 rounded-full overflow-hidden">
-                    <div class="h-full bg-amber-400 animate-[loading_1.2s_infinite]"></div>
+                    <div class="h-full bg-red-600 animate-[loading_1.2s_infinite]"></div>
                 </div>
             </div>
 
@@ -399,25 +405,25 @@
                 <!-- Identity Card -->
                 <div class="glass-card p-5 rounded-[32px] border border-white/80 space-y-4 relative overflow-hidden">
                     <div class="flex items-center gap-3 mb-2">
-                        <div class="w-10 h-10 rounded-[14px] bg-sky-100 text-sky-700 flex items-center justify-center shadow-inner font-black">
+                        <div class="w-10 h-10 rounded-[14px] bg-red-50 text-red-700 flex items-center justify-center shadow-inner font-black">
                             <i class="fa-solid fa-id-card text-base"></i>
                         </div>
                         <div>
                             <h4 class="text-xs font-black text-slate-800 uppercase tracking-wide">NSS വോളന്റിയർ & കുടുംബ വിവരങ്ങൾ</h4>
-                            <p class="text-[8px] font-bold text-slate-400 uppercase tracking-widest mt-0.5">NSS Grama Household Survey</p>
+                            <p class="text-[8px] font-bold text-red-700 uppercase tracking-widest mt-0.5">NSS Units 30 & 63 Household Survey</p>
                         </div>
                     </div>
 
                     <div class="space-y-3">
-                        <input type="text" name="volunteerName" required placeholder="NSS വോളന്റിയറുടെ പേര് (Volunteer Name)" class="w-full p-3.5 bg-slate-50/80 border border-slate-100 rounded-[18px] focus:bg-white focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 outline-none transition text-xs font-medium">
+                        <input type="text" name="volunteerName" required placeholder="NSS വോളന്റിയറുടെ പേര് (Volunteer Name)" class="w-full p-3.5 bg-slate-50/80 border border-slate-100 rounded-[18px] focus:bg-white focus:ring-2 focus:ring-red-500/20 focus:border-red-600 outline-none transition text-xs font-medium">
                         
                         <div class="grid grid-cols-2 gap-2.5">
-                            <input type="number" name="wardNo" required inputmode="numeric" placeholder="വാർഡ് നമ്പർ (Ward #)" class="w-full p-3.5 bg-slate-50/80 border border-slate-100 rounded-[18px] focus:bg-white focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 outline-none transition text-xs font-medium">
-                            <input type="text" name="houseNo" required placeholder="വീട്ടു നമ്പർ / ഐഡി (House ID)" class="w-full p-3.5 bg-slate-50/80 border border-slate-100 rounded-[18px] focus:bg-white focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 outline-none transition text-xs font-medium">
+                            <input type="number" name="wardNo" required inputmode="numeric" placeholder="വാർഡ് നമ്പർ (Ward #)" class="w-full p-3.5 bg-slate-50/80 border border-slate-100 rounded-[18px] focus:bg-white focus:ring-2 focus:ring-red-500/20 focus:border-red-600 outline-none transition text-xs font-medium">
+                            <input type="text" name="houseNo" required placeholder="വീട്ടു നമ്പർ / ഐഡി (House ID)" class="w-full p-3.5 bg-slate-50/80 border border-slate-100 rounded-[18px] focus:bg-white focus:ring-2 focus:ring-red-500/20 focus:border-red-600 outline-none transition text-xs font-medium">
                         </div>
 
-                        <input type="text" name="headName" required placeholder="കുടുംബനാഥൻ / കുടുംബനാഥയുടെ പേര്" class="w-full p-3.5 bg-slate-50/80 border border-slate-100 rounded-[18px] focus:bg-white focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 outline-none transition text-xs font-bold text-slate-900">
-                        <input type="number" name="membersCount" required inputmode="numeric" placeholder="വീട്ടിലെ ആകെ അംഗങ്ങളുടെ എണ്ണം (Members)" class="w-full p-3.5 bg-slate-50/80 border border-slate-100 rounded-[18px] focus:bg-white focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 outline-none transition text-xs font-medium">
+                        <input type="text" name="headName" required placeholder="കുടുംബനാഥൻ / കുടുംബനാഥയുടെ പേര്" class="w-full p-3.5 bg-slate-50/80 border border-slate-100 rounded-[18px] focus:bg-white focus:ring-2 focus:ring-red-500/20 focus:border-red-600 outline-none transition text-xs font-bold text-slate-900">
+                        <input type="number" name="membersCount" required inputmode="numeric" placeholder="വീട്ടിലെ ആകെ അംഗങ്ങളുടെ എണ്ണം (Members)" class="w-full p-3.5 bg-slate-50/80 border border-slate-100 rounded-[18px] focus:bg-white focus:ring-2 focus:ring-red-500/20 focus:border-red-600 outline-none transition text-xs font-medium">
                     </div>
                 </div>
 
@@ -425,8 +431,8 @@
 
                 <!-- Submit Button -->
                 <div class="pt-2 pb-6">
-                    <button type="submit" id="submit-btn" class="w-full bg-slate-900 text-white font-black py-4 rounded-[24px] shadow-xl shadow-slate-900/20 hover:bg-black active:scale-95 transition-all text-xs tracking-wider uppercase flex items-center justify-center gap-2.5">
-                        <i class="fa-solid fa-cloud-arrow-up text-base text-amber-400"></i> NSS ക്ലൗഡ് സെർവറിലേക്ക് അയക്കുക
+                    <button type="submit" id="submit-btn" class="w-full bg-red-700 text-white font-black py-4 rounded-[24px] shadow-xl shadow-red-700/30 hover:bg-red-800 active:scale-95 transition-all text-xs tracking-wider uppercase flex items-center justify-center gap-2.5 border border-amber-400/40">
+                        <i class="fa-solid fa-cloud-arrow-up text-base text-amber-300"></i> NSS ക്ലൗഡ് സെർവറിലേക്ക് അയക്കുക
                     </button>
                     <button type="button" onclick="resetForm()" class="w-full text-slate-400 font-bold text-[9px] uppercase tracking-[0.25em] py-5 active:text-rose-500 transition-colors">ഫോം ക്ലിയർ ചെയ്യുക</button>
                 </div>
@@ -443,7 +449,7 @@
                     <button onclick="exportDocText()" class="bg-amber-600 text-white px-3.5 py-3 rounded-[16px] text-[10px] font-black shadow-md shadow-amber-200 flex items-center gap-1.5 tracking-wider uppercase active:scale-95 transition-all">
                         <i class="fa-solid fa-file-word text-xs"></i> Doc Report
                     </button>
-                    <button onclick="window.print()" class="bg-sky-700 text-white px-4 py-3 rounded-[16px] text-[10px] font-black shadow-md shadow-sky-200 flex items-center gap-1.5 tracking-wider uppercase active:scale-95 transition-all">
+                    <button onclick="window.print()" class="bg-red-700 text-white px-4 py-3 rounded-[16px] text-[10px] font-black shadow-md shadow-red-200 flex items-center gap-1.5 tracking-wider uppercase active:scale-95 transition-all border border-amber-400/40">
                         <i class="fa-solid fa-print text-xs"></i> Print PDF
                     </button>
                 </div>
@@ -464,7 +470,7 @@
                 </div>
 
                 <h2 class="text-xl font-black text-slate-800 mb-0.5 tracking-tight">NSS ഗ്രാമ ഊർജ്ജ ഓഡിറ്റ്</h2>
-                <p class="text-[10px] font-black text-amber-600 uppercase tracking-[0.18em] mb-0.5">National Service Scheme (NSS)</p>
+                <p class="text-[10px] font-black text-red-700 uppercase tracking-[0.18em] mb-0.5">NSS UNITS 30 & 63</p>
                 <p class="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-6">മഹാത്മാ ഗാന്ധി കോളേജ്, ഇരിട്ടി • NOT ME BUT YOU</p>
                 
                 <div class="space-y-3 text-left bg-slate-50/80 p-5 rounded-[22px] border border-slate-100 mb-6">
@@ -473,21 +479,21 @@
                         <div><p class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">System Developer</p><p class="text-xs font-extrabold text-slate-800">Aravind o k</p></div>
                     </div>
                     <a href="tel:6238291791" class="flex items-center gap-3 group cursor-pointer">
-                        <div class="w-9 h-9 rounded-full bg-white flex items-center justify-center text-sky-600 shadow-sm shrink-0 group-hover:bg-sky-50 transition-colors"><i class="fa-solid fa-phone text-xs"></i></div>
+                        <div class="w-9 h-9 rounded-full bg-white flex items-center justify-center text-red-700 shadow-sm shrink-0 group-hover:bg-red-50 transition-colors"><i class="fa-solid fa-phone text-xs"></i></div>
                         <div>
                             <p class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Support Contact</p>
-                            <p class="text-xs font-extrabold text-sky-600 group-hover:underline">6238291791</p>
+                            <p class="text-xs font-extrabold text-red-700 group-hover:underline">6238291791</p>
                         </div>
                     </a>
                     <div class="flex items-center gap-3">
                         <div class="w-9 h-9 rounded-full bg-white flex items-center justify-center text-slate-400 shadow-sm shrink-0"><i class="fa-solid fa-building-columns text-xs"></i></div>
-                        <div><p class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Organized By</p><p class="text-xs font-extrabold text-slate-800">National Service Scheme (NSS)</p><p class="text-[9px] font-bold text-slate-500">Mahatma Gandhi College Iritty</p></div>
+                        <div><p class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Organized By</p><p class="text-xs font-extrabold text-slate-800">National Service Scheme (NSS Units 30 & 63)</p><p class="text-[9px] font-bold text-slate-500">Mahatma Gandhi College Iritty</p></div>
                     </div>
                 </div>
 
                 <div class="space-y-2.5 mb-5">
-                    <button onclick="manualSyncTrigger()" class="w-full py-3 bg-slate-900 text-white rounded-2xl text-xs font-black hover:bg-black transition-all uppercase tracking-wider flex items-center justify-center gap-2 shadow-sm">
-                        <i class="fa-solid fa-rotate text-amber-400 text-xs"></i> Force Sync with NSS Server
+                    <button onclick="manualSyncTrigger()" class="w-full py-3 bg-red-700 text-white rounded-2xl text-xs font-black hover:bg-red-800 transition-all uppercase tracking-wider flex items-center justify-center gap-2 shadow-sm border border-amber-400/30">
+                        <i class="fa-solid fa-rotate text-amber-300 text-xs"></i> Force Sync with NSS Server
                     </button>
                     <button onclick="clearLocalCache()" class="w-full py-2.5 border border-rose-200 text-rose-600 rounded-2xl text-xs font-extrabold hover:bg-rose-50 transition-all uppercase tracking-wider flex items-center justify-center gap-2">
                         <i class="fa-solid fa-trash-can text-xs"></i> Clear Local Cache Data
@@ -507,17 +513,17 @@
             <button id="nav-btn-dashboard" onclick="switchTab('dashboard')" class="nav-item flex flex-col items-center py-1.5 px-7 relative group w-20">
                 <i class="fa-solid fa-chart-simple text-xl mb-1 transition-all duration-300"></i>
                 <span class="text-[8px] font-extrabold uppercase tracking-wider">Data</span>
-                <div class="nav-dot absolute bottom-0 w-1.5 h-1.5 bg-sky-600 rounded-full"></div>
+                <div class="nav-dot absolute bottom-0 w-1.5 h-1.5 bg-red-600 rounded-full"></div>
             </button>
             
-            <button id="nav-btn-form" onclick="switchTab('form')" class="relative -top-5 w-14 h-14 bg-sky-700 text-white rounded-[20px] shadow-lg shadow-sky-300/70 flex items-center justify-center text-xl active:scale-90 transition-all border-[3px] border-white z-10">
+            <button id="nav-btn-form" onclick="switchTab('form')" class="relative -top-5 w-14 h-14 bg-red-700 text-white rounded-[20px] shadow-lg shadow-red-300/70 flex items-center justify-center text-xl active:scale-90 transition-all border-[3px] border-white z-10">
                 <i class="fa-solid fa-plus"></i>
             </button>
 
             <button id="nav-btn-info" onclick="switchTab('info')" class="nav-item flex flex-col items-center py-1.5 px-7 relative group w-20">
                 <i class="fa-solid fa-circle-info text-xl mb-1 transition-all duration-300"></i>
                 <span class="text-[8px] font-extrabold uppercase tracking-wider">Info</span>
-                <div class="nav-dot absolute bottom-0 w-1.5 h-1.5 bg-sky-600 rounded-full"></div>
+                <div class="nav-dot absolute bottom-0 w-1.5 h-1.5 bg-red-600 rounded-full"></div>
             </button>
         </div>
     </nav>
@@ -538,7 +544,7 @@
             measurementId: "G-1CN8XL3GFT"
         };
 
-        const LOCAL_STORAGE_KEY = 'nss_kerala_energy_audit_v3'; 
+        const LOCAL_STORAGE_KEY = 'nss_units_30_63_energy_audit_v4'; 
 
         let app = null;
         let auth = null;
@@ -600,7 +606,7 @@
                 iconEl.className = "w-16 h-16 bg-emerald-50 text-emerald-500 rounded-[22px] flex items-center justify-center mx-auto mb-4";
                 iconEl.innerHTML = '<i class="fa-solid fa-check text-2xl"></i>';
             } else {
-                iconEl.className = "w-16 h-16 bg-sky-50 text-sky-600 rounded-[22px] flex items-center justify-center mx-auto mb-4";
+                iconEl.className = "w-16 h-16 bg-red-50 text-red-600 rounded-[22px] flex items-center justify-center mx-auto mb-4";
                 iconEl.innerHTML = '<i class="fa-solid fa-bell text-2xl"></i>';
             }
             document.getElementById('custom-alert').classList.remove('hidden');
@@ -659,10 +665,10 @@
             if(tab === 'info') btns.info?.classList.add('nav-active');
             
             if(tab === 'form') {
-                btns.form?.classList.remove('bg-sky-700');
+                btns.form?.classList.remove('bg-red-700');
                 btns.form?.classList.add('bg-slate-900', 'shadow-slate-900/30');
             } else {
-                btns.form?.classList.add('bg-sky-700');
+                btns.form?.classList.add('bg-red-700');
                 btns.form?.classList.remove('bg-slate-900', 'shadow-slate-900/30');
             }
 
@@ -928,11 +934,11 @@
             const riskContainer = document.getElementById('risk-bars');
             if(riskContainer) {
                 const risks = [
-                    { l: 'Standby Power Losses', v: stats.standbyRisk, c: 'bg-rose-500', i: 'fa-plug-circle-xmark' },
-                    { l: 'Induction Fan Motor Load', v: stats.thermalRisk, c: 'bg-pink-500', i: 'fa-fan' },
+                    { l: 'Standby Power Losses', v: stats.standbyRisk, c: 'bg-rose-600', i: 'fa-plug-circle-xmark' },
+                    { l: 'Induction Fan Motor Load', v: stats.thermalRisk, c: 'bg-pink-600', i: 'fa-fan' },
                     { l: 'Water Motor Overflows', v: stats.overflowRisk, c: 'bg-amber-500', i: 'fa-glass-water-droplet' },
                     { l: 'AC Temp < 24°C (Compressor Load)', v: stats.lowACRisk, c: 'bg-orange-500', i: 'fa-temperature-arrow-down' },
-                    { l: 'ELCB Safety Hazard', v: stats.safetyHazard, c: 'bg-purple-500', i: 'fa-triangle-exclamation' },
+                    { l: 'ELCB Safety Hazard', v: stats.safetyHazard, c: 'bg-purple-600', i: 'fa-triangle-exclamation' },
                 ];
                 riskContainer.innerHTML = risks.map(r => `
                     <div class="group">
@@ -956,7 +962,7 @@
                             <span class="text-slate-400 font-bold">${count} വീടുകൾ</span>
                         </div>
                         <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden shadow-inner border border-slate-200/60">
-                            <div class="bg-sky-700 h-full transition-all duration-1000 ease-out" style="width: ${(count/total)*100}%"></div>
+                            <div class="bg-blue-900 h-full transition-all duration-1000 ease-out" style="width: ${(count/total)*100}%"></div>
                         </div>
                     </div>
                 `).join('');
@@ -1006,8 +1012,8 @@
                                 </div>
                                 <p class="text-[12px] font-extrabold text-slate-800 truncate max-w-[150px] sm:max-w-[200px]">${v.name}</p>
                             </div>
-                            <div class="bg-sky-50 px-3 py-1 rounded-full border border-sky-100">
-                                <p class="text-[10px] font-black text-sky-700">${v.count} Audits</p>
+                            <div class="bg-red-50 px-3 py-1 rounded-full border border-red-100">
+                                <p class="text-[10px] font-black text-red-700">${v.count} Audits</p>
                             </div>
                         </div>
                         `;
@@ -1022,7 +1028,7 @@
                 } else {
                     listEl.innerHTML = filtered.map(s => `
                         <div class="glass-card p-3.5 rounded-[22px] border border-white/70 shadow-sm flex items-center gap-3.5 transition-transform ${isAdmin ? '' : 'active:scale-[0.98] cursor-pointer'}" ${isAdmin ? '' : `onclick="showAuditDetail('${s.id}')"`}>
-                            <div class="w-11 h-11 rounded-[16px] bg-sky-50 text-sky-700 flex items-center justify-center font-black text-[10px] border border-sky-100 uppercase tracking-widest flex-shrink-0 cursor-pointer shadow-inner" onclick="showAuditDetail('${s.id}')">
+                            <div class="w-11 h-11 rounded-[16px] bg-red-50 text-red-700 flex items-center justify-center font-black text-[10px] border border-red-100 uppercase tracking-widest flex-shrink-0 cursor-pointer shadow-inner" onclick="showAuditDetail('${s.id}')">
                                 W${s.wardNo}
                             </div>
                             <div class="flex-grow min-w-0 cursor-pointer" onclick="showAuditDetail('${s.id}')">
@@ -1030,11 +1036,11 @@
                                     <h5 class="font-extrabold text-[13px] text-slate-800 truncate leading-tight">${s.headName || 'പേരില്ല'}</h5>
                                     ${s.synced ? '<span class="text-[8px] bg-emerald-50 text-emerald-600 border border-emerald-100 px-1.5 py-0.5 rounded-md font-extrabold flex items-center gap-1"><i class="fa-solid fa-cloud"></i> Synced</span>' : '<span class="text-[8px] bg-amber-50 text-amber-600 border border-amber-100 px-1.5 py-0.5 rounded-md font-extrabold flex items-center gap-1"><i class="fa-solid fa-hard-drive"></i> Local</span>'}
                                 </div>
-                                <p class="text-[9px] font-bold text-sky-600 uppercase tracking-[0.15em] mt-0.5 truncate">ID: ${s.houseNo} • Volunteer: ${s.volunteerName || 'Unknown'}</p>
+                                <p class="text-[9px] font-bold text-red-700 uppercase tracking-[0.15em] mt-0.5 truncate">ID: ${s.houseNo} • Vol: ${s.volunteerName || 'Unknown'}</p>
                             </div>
                             ${isAdmin ? `
                                 <div class="flex items-center gap-1.5">
-                                    <button onclick="editSurveyFn('${s.id}')" class="w-8 h-8 rounded-full bg-sky-50 flex items-center justify-center text-sky-600 hover:bg-sky-100 transition shadow-sm" title="Edit Data">
+                                    <button onclick="editSurveyFn('${s.id}')" class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center text-blue-800 hover:bg-blue-100 transition shadow-sm" title="Edit Data">
                                         <i class="fa-solid fa-pen text-[10px]"></i>
                                     </button>
                                     <button onclick="deleteSurveyFn('${s.id}')" class="w-8 h-8 rounded-full bg-rose-50 flex items-center justify-center text-rose-500 hover:bg-rose-100 transition shadow-sm" title="Delete Data">
@@ -1079,7 +1085,7 @@
                                     <span class="text-[9px] font-extrabold text-slate-500 uppercase">Volunteer: ${sRef.volunteerName}</span>
                                 </div>
                                 <h5 class="font-black text-[12px] text-slate-800 mb-0.5">${sRef.headName}</h5>
-                                <p class="text-[9px] font-bold text-sky-600 uppercase tracking-wider mb-2.5">House ID: ${sRef.houseNo}</p>
+                                <p class="text-[9px] font-bold text-red-700 uppercase tracking-wider mb-2.5">House ID: ${sRef.houseNo}</p>
                                 <div class="space-y-1.5">
                                     ${group.map((dup, idx) => {
                                         const d = dup.date || 'Pending...';
@@ -1090,7 +1096,7 @@
                                                 <span class="text-[8px] font-bold text-slate-400 uppercase tracking-wider">${d}</span>
                                             </div>
                                             <div class="flex gap-1.5">
-                                                <button onclick="editSurveyFn('${dup.id}')" class="w-7 h-7 rounded-full bg-sky-50 text-sky-600 hover:bg-sky-200 flex items-center justify-center transition border border-sky-100" title="Edit Copy"><i class="fa-solid fa-pen text-[9px]"></i></button>
+                                                <button onclick="editSurveyFn('${dup.id}')" class="w-7 h-7 rounded-full bg-blue-50 text-blue-700 hover:bg-blue-200 flex items-center justify-center transition border border-blue-100" title="Edit Copy"><i class="fa-solid fa-pen text-[9px]"></i></button>
                                                 <button onclick="showAuditDetail('${dup.id}')" class="w-7 h-7 rounded-full bg-slate-50 text-slate-400 hover:bg-slate-200 flex items-center justify-center transition border border-slate-100" title="View Report"><i class="fa-solid fa-eye text-[9px]"></i></button>
                                                 <button onclick="deleteSurveyFn('${dup.id}')" class="w-7 h-7 rounded-full bg-rose-50 text-rose-500 hover:bg-rose-200 flex items-center justify-center transition border border-rose-100" title="Delete Copy"><i class="fa-solid fa-trash text-[9px]"></i></button>
                                             </div>
@@ -1115,7 +1121,6 @@
             triggerHaptic();
             window.showConfirm("ഈ സർവേ വിവരങ്ങൾ ഡിലീറ്റ് ചെയ്യാൻ ഉറപ്പാണോ?", async () => {
                 try {
-                    // Try cloud deletion if online and valid firestore doc
                     if(db && navigator.onLine && id && !id.startsWith('local_')) {
                         try {
                             await deleteDoc(doc(db, 'surveys', id));
@@ -1168,7 +1173,7 @@
             }
 
             const btn = document.getElementById('submit-btn');
-            if(btn) btn.innerHTML = '<i class="fa-solid fa-cloud-arrow-up text-base text-amber-400"></i> വിവരങ്ങൾ അപ്ഡേറ്റ് ചെയ്യുക';
+            if(btn) btn.innerHTML = '<i class="fa-solid fa-cloud-arrow-up text-base text-amber-300"></i> വിവരങ്ങൾ അപ്ഡേറ്റ് ചെയ്യുക';
             window.showAlert("മാറ്റങ്ങൾ വരുത്തിയ ശേഷം സബ്മിറ്റ് ബട്ടൺ അമർത്തുക.", "എഡിറ്റ് മോഡ്", "info");
         };
 
@@ -1281,7 +1286,7 @@
                     { id: 'q8', m: 'വീട്ടിലെ ഫാനുകളുടെ സാങ്കേതികവിദ്യ', e: 'Ceiling Fan Efficiency', o: ['ബി.എൽ.ഡി.സി എനർജി സേവിംഗ് ഫാനുകൾ (BLDC ~28W)', 'സാധാരണ ഇൻഡക്ഷൻ ഫാനുകൾ (~75W)', 'രണ്ടിന്റെയും മിശ്രിതം (Mix of Fans)', 'ഫാനുകൾ ഇല്ല (No Fans)'], isElec: true },
                     { id: 'q9', m: 'പാചകത്തിന് ഉപയോഗിക്കുന്ന പ്രധാന ഊർജ്ജ സ്രോതസ്സ്', e: 'Primary Cooking Fuel Source', o: ['എൽ.പി.ജി ഗ്യാസ് (LPG Gas)', 'വിറക് / ജീവപിണ്ഡം (Biomass/Firewood)', 'ഇലക്ട്രിക് / ഇൻഡക്ഷൻ അടുപ്പ്', 'ഹൈബ്രിഡ് (ഗ്യാസ് + വിറക്/ഇലക്ട്രിക്)'] }
                 ]},
-                { id: 'sec4', l: 'Section 4: തണുപ്പിക്കൽ ഉപകരണങ്ങളും റഫ്രിജറേഷനും', qs: [
+                { id: 'sec4', l: 'Section 4: തണുപ്പിക്കൽ उपकरणोंങ്ങളും റഫ്രിജറേഷനും', qs: [
                     { id: 'q10', m: 'റഫ്രിജറേറ്റർ (ഫ്രിഡ്ജ്) ഉപയോഗവും സാങ്കേതികവിദ്യയും', e: 'Refrigerator Efficiency & Rating', o: ['5-Star / 4-Star ഇൻവെർട്ടർ ഫ്രിഡ്ജ്', '1-Star മുതൽ 3-Star വരെയുള്ള സാധാരണ ഫ്രിഡ്ജ്', '8 വർഷത്തിൽ കൂടുതൽ പഴക്കമുള്ള പഴയ മോഡൽ', 'ഫ്രിഡ്ജ് ഇല്ല (No Fridge)'], isElec: true },
                     { id: 'q11', m: 'എയർ കണ്ടീഷണർ (AC) ഉപയോഗിക്കുന്നുണ്ടോ?', e: 'Air Conditioner Usage', o: ['ഉണ്ട് - ഇൻവെർട്ടർ AC', 'ഉണ്ട് - നൺ-ഇൻവെർട്ടർ AC', 'എ.സി ഇല്ല (No AC)'], isElec: true },
                     { id: 'q12', m: 'എ.സി ഉപയോഗിക്കുമ്പോൾ സൂക്ഷിക്കുന്ന താപനില', e: 'AC Temperature Setting', o: ['24°C അല്ലെങ്കിൽ അതിൽ കൂടുതൽ (മിതമായ ഉപയോഗം)', '24°C-ൽ താഴെ (ഉയർന്ന പവർ ഉപയോഗം)'], p: 'q11', t: 'ഉണ്ട്', isElec: true },
@@ -1301,7 +1306,7 @@
                 container.innerHTML = q.map(s => `
                     <div class="space-y-3">
                         <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] ml-1 flex items-center gap-2">
-                            <span class="w-1.5 h-1.5 rounded-full bg-sky-600"></span> ${s.l}
+                            <span class="w-1.5 h-1.5 rounded-full bg-red-600"></span> ${s.l}
                         </h4>
                         <div class="space-y-2.5">
                             ${s.qs.map(item => `
@@ -1316,7 +1321,7 @@
                                                 <input type="radio" name="${item.id}" value="${opt}" class="hidden peer" ${item.p ? '' : 'required'}>
                                                 <div class="radio-tile flex items-center justify-between px-4 py-3 rounded-[16px] border-2 border-slate-100 bg-slate-50/70 transition-all active:scale-[0.98]">
                                                     <span class="text-[12px] font-bold text-slate-700 transition-colors">${opt}</span>
-                                                    <div class="check-icon hidden w-4 h-4 bg-sky-600 rounded-full items-center justify-center shadow-sm">
+                                                    <div class="check-icon hidden w-4 h-4 bg-red-600 rounded-full items-center justify-center shadow-sm">
                                                         <i class="fa-solid fa-check text-[9px] text-white"></i>
                                                     </div>
                                                 </div>
@@ -1330,16 +1335,16 @@
                 `).join('');
 
                 container.innerHTML += `
-                    <div class="p-5 glass-card rounded-[28px] border-2 border-sky-100 text-center mt-4">
-                        <div class="w-11 h-11 bg-white rounded-[14px] text-sky-700 flex items-center justify-center mx-auto mb-3 shadow-sm border border-sky-100">
+                    <div class="p-5 glass-card rounded-[28px] border-2 border-red-100 text-center mt-4">
+                        <div class="w-11 h-11 bg-white rounded-[14px] text-red-700 flex items-center justify-center mx-auto mb-3 shadow-sm border border-red-100">
                             <i class="fa-solid fa-hand-holding-heart text-lg"></i>
                         </div>
-                        <p class="text-sky-950 font-extrabold text-[12px] mb-0.5 leading-relaxed">NSS ഊർജ്ജ സംരക്ഷണ പ്രതിജ്ഞ</p>
-                        <p class="text-[9px] text-slate-500 font-bold mb-4 uppercase tracking-wider">NOT ME BUT YOU • ഊർജ്ജം സംരക്ഷിക്കാം</p>
+                        <p class="text-slate-900 font-extrabold text-[12px] mb-0.5 leading-relaxed">NSS ഊർജ്ജ സംരക്ഷണ പ്രതിജ്ഞ</p>
+                        <p class="text-[9px] text-red-700 font-bold mb-4 uppercase tracking-wider">UNITS 30 & 63 • NOT ME BUT YOU</p>
                         <div class="flex flex-col gap-2 radio-tile-group">
                             <label class="cursor-pointer block w-full" onclick="window.navigator.vibrate?.(10)">
                                 <input type="radio" name="pledge" value="Yes, We Pledge to conserve energy!" class="hidden" required>
-                                <div class="radio-tile py-3.5 rounded-[18px] bg-white border-2 border-transparent text-sky-800 font-black text-[12px] transition shadow-sm flex items-center justify-center gap-2">
+                                <div class="radio-tile py-3.5 rounded-[18px] bg-white border-2 border-transparent text-slate-900 font-black text-[12px] transition shadow-sm flex items-center justify-center gap-2">
                                     <i class="fa-solid fa-check-circle text-emerald-500"></i> Yes, We Pledge
                                 </div>
                             </label>
@@ -1459,67 +1464,71 @@
 
             const row = (l, v, isLast = false) => `
                 <div class="flex border-slate-300 print:border-slate-800 ${isLast ? '' : 'border-b'}">
-                    <div class="w-[50%] p-2 print:p-[5px] text-[11px] print:text-[8px] font-bold uppercase text-slate-600 print:text-slate-800 border-r border-slate-300 print:border-slate-800 bg-slate-50 print:bg-transparent flex items-center print-exact-color">${l}</div>
-                    <div class="w-[50%] p-2 print:p-[5px] text-[12px] print:text-[9px] font-black text-slate-900 break-words flex items-center">${getV(v)}</div>
+                    <div class="w-[50%] p-1.5 print:p-[4px] text-[10px] print:text-[8px] font-bold uppercase text-slate-700 print:text-slate-800 border-r border-slate-300 print:border-slate-800 bg-slate-50 print:bg-transparent flex items-center print-exact-color">${l}</div>
+                    <div class="w-[50%] p-1.5 print:p-[4px] text-[11px] print:text-[8.5px] font-black text-slate-900 break-words flex items-center">${getV(v)}</div>
                 </div>`;
                 
             const head = (l) => `
-                <h3 class="text-xs print:text-[9px] font-black text-white bg-slate-900 print:bg-slate-800 px-3 py-2 print:py-1 uppercase tracking-widest print-exact-color m-0">${l}</h3>`;
+                <h3 class="text-[11px] print:text-[8px] font-black text-white bg-slate-900 print:bg-slate-900 px-2.5 py-1.5 print:py-0.5 uppercase tracking-widest print-exact-color m-0">${l}</h3>`;
             
             return `
                 <div class="p-6 print:p-0 bg-white w-full box-border flex flex-col a4-print-container">
                     
-                    <div class="flex justify-between items-center mb-6 print:mb-3 border-b-2 border-slate-900 pb-6 print:pb-3 flex-shrink-0">
+                    <!-- Printable Top Header -->
+                    <div class="flex justify-between items-center mb-4 print:mb-2 border-b-2 border-slate-900 pb-4 print:pb-2 flex-shrink-0">
                         <div class="flex items-center gap-3">
-                            <img src="college_logo.png" class="h-16 w-16 print:h-[45px] print:w-[45px] object-contain" onerror="this.style.display='none'">
+                            <img src="college_logo.png" class="h-14 w-14 print:h-[38px] print:w-[38px] object-contain" onerror="this.style.display='none'">
                         </div>
                         <div class="flex-grow text-center px-2">
-                            <h2 class="text-xl print:text-[14px] font-black tracking-widest text-slate-900 uppercase leading-tight m-0 p-0">NSS HOUSEHOLD ENERGY AUDIT REPORT</h2>
-                            <p class="text-sm print:text-[10px] font-extrabold text-sky-800 mt-1 print:mt-0.5 m-0 p-0 uppercase">NATIONAL SERVICE SCHEME (NSS)</p>
-                            <p class="text-xs print:text-[9px] font-extrabold text-slate-800 mt-0.5 m-0 p-0">Mahatma Gandhi College, Iritty</p>
-                            <p class="text-[10px] print:text-[7px] font-bold text-amber-600 mt-1 print:mt-0.5 tracking-widest uppercase m-0 p-0">NOT ME BUT YOU • NSS GRAMA (MANASAGRAMAM) INITIATIVE</p>
+                            <h2 class="text-lg print:text-[13px] font-black tracking-widest text-slate-900 uppercase leading-tight m-0 p-0">NSS HOUSEHOLD ENERGY AUDIT REPORT</h2>
+                            <p class="text-xs print:text-[9px] font-extrabold text-red-700 mt-0.5 m-0 p-0 uppercase">NATIONAL SERVICE SCHEME (UNITS 30 & 63)</p>
+                            <p class="text-[11px] print:text-[8px] font-extrabold text-slate-800 mt-0.5 m-0 p-0">Mahatma Gandhi College, Iritty</p>
+                            <p class="text-[9px] print:text-[6.5px] font-bold text-amber-600 mt-0.5 tracking-widest uppercase m-0 p-0">NOT ME BUT YOU • NSS GRAMA (MANASAGRAMAM) INITIATIVE</p>
                         </div>
                         <div class="flex items-center gap-3">
-                            <img src="nss_logo.png" class="h-16 w-16 print:h-[45px] print:w-[45px] object-contain" onerror="this.style.display='none'">
+                            <img src="nss_logo.png" class="h-14 w-14 print:h-[38px] print:w-[38px] object-contain" onerror="this.style.display='none'">
                         </div>
                     </div>
                     
-                    <div class="flex flex-col sm:flex-row print:flex-row gap-4 print:gap-4 mb-6 print:mb-3 flex-shrink-0">
+                    <!-- Metadata Info Row -->
+                    <div class="flex flex-col sm:flex-row print:flex-row gap-3 print:gap-2 mb-4 print:mb-2 flex-shrink-0">
                         <div class="flex-1 border border-slate-300 print:border-slate-800 rounded-md print:rounded-none overflow-hidden">
                             <div class="flex border-b border-slate-300 print:border-slate-800">
-                                <div class="w-2/5 p-2 print:p-1.5 text-[10px] print:text-[8px] font-bold uppercase text-slate-600 print:text-slate-800 border-r border-slate-300 print:border-slate-800 bg-slate-50 print:bg-transparent flex items-center print-exact-color">SURVEY DATE</div>
-                                <div class="w-3/5 p-2 print:p-1.5 text-sm print:text-[10px] font-black text-slate-900">${s.date || '—'}</div>
+                                <div class="w-2/5 p-1.5 print:p-1 text-[9px] print:text-[7.5px] font-bold uppercase text-slate-600 print:text-slate-800 border-r border-slate-300 print:border-slate-800 bg-slate-50 print:bg-transparent flex items-center print-exact-color">SURVEY DATE</div>
+                                <div class="w-3/5 p-1.5 print:p-1 text-xs print:text-[9px] font-black text-slate-900">${s.date || '—'}</div>
                             </div>
                             <div class="flex">
-                                <div class="w-2/5 p-2 print:p-1.5 text-[10px] print:text-[8px] font-bold uppercase text-slate-600 print:text-slate-800 border-r border-slate-300 print:border-slate-800 bg-slate-50 print:bg-transparent flex items-center print-exact-color">HEAD OF HOUSEHOLD</div>
-                                <div class="w-3/5 p-2 print:p-1.5 text-sm print:text-[10px] font-black text-slate-900">${s.headName}</div>
+                                <div class="w-2/5 p-1.5 print:p-1 text-[9px] print:text-[7.5px] font-bold uppercase text-slate-600 print:text-slate-800 border-r border-slate-300 print:border-slate-800 bg-slate-50 print:bg-transparent flex items-center print-exact-color">HEAD OF HOUSEHOLD</div>
+                                <div class="w-3/5 p-1.5 print:p-1 text-xs print:text-[9px] font-black text-slate-900">${s.headName}</div>
                             </div>
                         </div>
                         <div class="flex-1 border border-slate-300 print:border-slate-800 rounded-md print:rounded-none overflow-hidden">
                             <div class="flex border-b border-slate-300 print:border-slate-800">
-                                <div class="w-2/5 p-2 print:p-1.5 text-[10px] print:text-[8px] font-bold uppercase text-slate-600 print:text-slate-800 border-r border-slate-300 print:border-slate-800 bg-slate-50 print:bg-transparent flex items-center print-exact-color">HOUSE ID</div>
-                                <div class="w-3/5 p-2 print:p-1.5 text-sm print:text-[10px] font-black text-slate-900">${s.houseNo}</div>
+                                <div class="w-2/5 p-1.5 print:p-1 text-[9px] print:text-[7.5px] font-bold uppercase text-slate-600 print:text-slate-800 border-r border-slate-300 print:border-slate-800 bg-slate-50 print:bg-transparent flex items-center print-exact-color">HOUSE ID</div>
+                                <div class="w-3/5 p-1.5 print:p-1 text-xs print:text-[9px] font-black text-slate-900">${s.houseNo}</div>
                             </div>
                             <div class="flex">
-                                <div class="w-2/5 p-2 print:p-1.5 text-[10px] print:text-[8px] font-bold uppercase text-slate-600 print:text-slate-800 border-r border-slate-300 print:border-slate-800 bg-slate-50 print:bg-transparent flex items-center print-exact-color">WARD NO</div>
-                                <div class="w-3/5 p-2 print:p-1.5 text-sm print:text-[10px] font-black text-slate-900">${s.wardNo}</div>
+                                <div class="w-2/5 p-1.5 print:p-1 text-[9px] print:text-[7.5px] font-bold uppercase text-slate-600 print:text-slate-800 border-r border-slate-300 print:border-slate-800 bg-slate-50 print:bg-transparent flex items-center print-exact-color">WARD NO</div>
+                                <div class="w-3/5 p-1.5 print:p-1 text-xs print:text-[9px] font-black text-slate-900">${s.wardNo}</div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-slate-50 print:bg-transparent border border-slate-300 print:border-slate-800 rounded-md print:rounded-none p-3 print:p-2 mb-4 print:mb-3 flex justify-between items-center flex-shrink-0">
+                    <!-- KSEB Metrics Container -->
+                    <div class="bg-slate-50 print:bg-transparent border border-slate-300 print:border-slate-800 rounded-md print:rounded-none p-2.5 print:p-1.5 mb-3 print:mb-2 flex justify-between items-center flex-shrink-0">
                         <div>
-                            <p class="text-[10px] print:text-[8px] font-extrabold uppercase text-slate-600 print:text-slate-800">ESTIMATED BIMONTHLY KSEB BILL</p>
-                            <p class="text-base print:text-[12px] font-black text-sky-800 print:text-slate-900">₹${estKsebBill} <span class="text-[10px] print:text-[7px] font-semibold text-slate-500">(LT-1A Domestic)</span></p>
+                            <p class="text-[9px] print:text-[7.5px] font-extrabold uppercase text-slate-600 print:text-slate-800">ESTIMATED BIMONTHLY KSEB BILL</p>
+                            <p class="text-sm print:text-[11px] font-black text-red-700 print:text-slate-900">₹${estKsebBill} <span class="text-[9px] print:text-[6.5px] font-semibold text-slate-500">(LT-1A Domestic)</span></p>
                         </div>
                         <div class="text-right">
-                            <p class="text-[10px] print:text-[8px] font-extrabold uppercase text-slate-600 print:text-slate-800">ANNUAL CARBON FOOTPRINT</p>
-                            <p class="text-base print:text-[12px] font-black text-emerald-700 print:text-slate-900">${annualCo2} kg CO₂/year</p>
+                            <p class="text-[9px] print:text-[7.5px] font-extrabold uppercase text-slate-600 print:text-slate-800">ANNUAL CARBON FOOTPRINT</p>
+                            <p class="text-sm print:text-[11px] font-black text-emerald-700 print:text-slate-900">${annualCo2} kg CO₂/year</p>
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 gap-x-6 print:gap-x-6 gap-y-4 print:gap-y-3 mb-6 print:mb-2 flex-grow">
-                        <div class="flex flex-col gap-4 print:gap-3">
+                    <!-- Compact Printable Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 gap-x-4 print:gap-x-4 gap-y-3 print:gap-y-1.5 mb-4 print:mb-2 flex-grow">
+                        <div class="flex flex-col gap-3 print:gap-1.5">
                             <div class="border border-slate-300 print:border-slate-800 rounded-b-md print:rounded-none overflow-hidden">
                                 ${head('ELECTRICAL CONNECTION & LOAD')}
                                 ${row('GRID CONNECTION', s.q1)}
@@ -1542,7 +1551,7 @@
                             </div>
                         </div>
                         
-                        <div class="flex flex-col gap-4 print:gap-3">
+                        <div class="flex flex-col gap-3 print:gap-1.5">
                             <div class="border border-slate-300 print:border-slate-800 rounded-b-md print:rounded-none overflow-hidden">
                                 ${head('COOLING & REFRIGERATION')}
                                 ${row('REFRIGERATOR TECH', s.q10)}
@@ -1565,29 +1574,29 @@
                     ${isBatchMode ? '' : (() => {
                         const r = generateRecommendations(s);
                         return `
-                        <div class="mb-6 print:hidden">
-                            <h4 class="text-xs font-black text-slate-800 uppercase tracking-widest mb-3 border-l-4 border-slate-800 pl-2">NSS ഊർജ്ജ സംരക്ഷണ നിർദ്ദേശങ്ങൾ</h4>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div class="bg-amber-50/50 p-4 rounded-xl border border-amber-100">
-                                    <p class="text-[10px] font-black text-amber-600 uppercase tracking-widest mb-3 flex items-center gap-1.5"><i class="fa-solid fa-lightbulb"></i> ശ്രദ്ധിക്കേണ്ട കാര്യങ്ങൾ</p>
-                                    <div class="space-y-2.5">
+                        <div class="mb-4 print:hidden">
+                            <h4 class="text-xs font-black text-slate-800 uppercase tracking-widest mb-2 border-l-4 border-slate-800 pl-2">NSS ഊർജ്ജ സംരക്ഷണ നിർദ്ദേശങ്ങൾ</h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div class="bg-amber-50/50 p-3 rounded-xl border border-amber-100">
+                                    <p class="text-[9px] font-black text-amber-600 uppercase tracking-widest mb-2 flex items-center gap-1.5"><i class="fa-solid fa-lightbulb"></i> ശ്രദ്ധിക്കേണ്ട കാര്യങ്ങൾ</p>
+                                    <div class="space-y-2">
                                         ${r.improve.length > 0 ? r.improve.map(item => `
                                             <div>
-                                                <p class="text-[11px] font-bold text-slate-800 leading-tight">${item.title}</p>
-                                                <p class="text-[9px] font-bold text-amber-700 mt-0.5 leading-snug">${item.mal}</p>
+                                                <p class="text-[10px] font-bold text-slate-800 leading-tight">${item.title}</p>
+                                                <p class="text-[8.5px] font-bold text-amber-700 mt-0.5 leading-snug">${item.mal}</p>
                                             </div>
-                                        `).join('<div class="h-px bg-amber-200/50 my-1.5"></div>') : '<p class="text-[10px] text-slate-500 italic">ഉത്തമമായ ഊർജ്ജ സംരക്ഷണ രീതികൾ!</p>'}
+                                        `).join('<div class="h-px bg-amber-200/50 my-1"></div>') : '<p class="text-[9px] text-slate-500 italic">ഉത്തമമായ ഊർജ്ജ സംരക്ഷണ രീതികൾ!</p>'}
                                     </div>
                                 </div>
-                                <div class="bg-emerald-50/50 p-4 rounded-xl border border-emerald-100">
-                                    <p class="text-[10px] font-black text-emerald-600 uppercase tracking-widest mb-3 flex items-center gap-1.5"><i class="fa-solid fa-thumbs-up"></i> മാതൃകാപരമായ രീതികൾ</p>
-                                    <div class="space-y-2.5">
+                                <div class="bg-emerald-50/50 p-3 rounded-xl border border-emerald-100">
+                                    <p class="text-[9px] font-black text-emerald-600 uppercase tracking-widest mb-2 flex items-center gap-1.5"><i class="fa-solid fa-thumbs-up"></i> മാതൃകാപരമായ രീതികൾ</p>
+                                    <div class="space-y-2">
                                         ${r.good.length > 0 ? r.good.map(item => `
                                             <div>
-                                                <p class="text-[11px] font-bold text-slate-800 leading-tight">${item.title}</p>
-                                                <p class="text-[9px] font-bold text-emerald-700 mt-0.5 leading-snug">${item.mal}</p>
+                                                <p class="text-[10px] font-bold text-slate-800 leading-tight">${item.title}</p>
+                                                <p class="text-[8.5px] font-bold text-emerald-700 mt-0.5 leading-snug">${item.mal}</p>
                                             </div>
-                                        `).join('<div class="h-px bg-emerald-200/50 my-1.5"></div>') : '<p class="text-[10px] text-slate-500 italic">പ്രത്യേക ഗ്രീൻ പ്രാക്ടീസുകൾ രേഖപ്പെടുത്തിയിട്ടില്ല.</p>'}
+                                        `).join('<div class="h-px bg-emerald-200/50 my-1"></div>') : '<p class="text-[9px] text-slate-500 italic">പ്രത്യേക ഗ്രീൻ പ്രാക്ടീസുകൾ രേഖപ്പെടുത്തിയിട്ടില്ല.</p>'}
                                     </div>
                                 </div>
                             </div>
@@ -1595,20 +1604,21 @@
                         `;
                     })()}
 
-                    <div class="mt-auto print:mt-auto pt-6 print:pt-4 flex-shrink-0">
-                        <div class="bg-sky-50 print:bg-transparent print-exact-color border-2 border-sky-200 print:border-slate-800 p-4 print:p-2 rounded-2xl print:rounded-none text-center mb-6 print:mb-4">
-                            <h4 class="text-base print:text-[11px] font-black uppercase tracking-tight text-sky-900 print:text-slate-900 mb-1 leading-none print:leading-tight">${s.pledge}</h4>
-                            <p class="text-[9px] print:text-[8px] font-bold uppercase tracking-widest text-sky-700 print:text-slate-500 print:mt-1">NSS DECLARATION OF ENERGY CONSERVATION</p>
+                    <!-- Footer Declaration -->
+                    <div class="mt-auto print:mt-auto pt-3 print:pt-2 flex-shrink-0">
+                        <div class="bg-red-50 print:bg-transparent print-exact-color border border-red-200 print:border-slate-800 p-2.5 print:p-1.5 rounded-xl print:rounded-none text-center mb-3 print:mb-2">
+                            <h4 class="text-xs print:text-[10px] font-black uppercase tracking-tight text-red-900 print:text-slate-900 mb-0.5 leading-none print:leading-tight">${s.pledge}</h4>
+                            <p class="text-[8px] print:text-[7px] font-bold uppercase tracking-widest text-red-700 print:text-slate-500">NSS UNITS 30 & 63 DECLARATION OF ENERGY CONSERVATION</p>
                         </div>
 
-                        <div class="flex justify-between items-end pb-4 px-4 print:px-2 border-t-2 border-slate-900 pt-4">
-                            <div class="text-left w-1/3">
-                                <p class="text-sm print:text-[10px] font-black text-slate-900 uppercase tracking-wider mb-1">${s.volunteerName}</p>
-                                <p class="text-[10px] print:text-[7px] font-bold text-slate-500 uppercase tracking-widest border-t border-slate-400 print:border-slate-800 pt-1">NSS VOLUNTEER</p>
+                        <div class="flex justify-between items-end pb-2 px-2 print:px-1 border-t-2 border-slate-900 pt-2">
+                            <div class="text-left w-1/2">
+                                <p class="text-xs print:text-[9.5px] font-black text-slate-900 uppercase tracking-wider mb-0.5">${s.volunteerName}</p>
+                                <p class="text-[9px] print:text-[6.5px] font-bold text-slate-500 uppercase tracking-widest border-t border-slate-400 print:border-slate-800 pt-0.5">NSS VOLUNTEER (UNITS 30 & 63)</p>
                             </div>
-                            <div class="text-right w-1/3">
-                                <p class="text-base print:text-[11px] font-black text-slate-800 uppercase tracking-widest">NSS MG COLLEGE</p>
-                                <p class="text-[8px] print:text-[6px] font-bold text-slate-500 uppercase tracking-widest mt-0.5">NOT ME BUT YOU</p>
+                            <div class="text-right w-1/2">
+                                <p class="text-xs print:text-[9.5px] font-black text-slate-800 uppercase tracking-widest">NSS MG COLLEGE IRITTY</p>
+                                <p class="text-[7.5px] print:text-[5.5px] font-bold text-slate-500 uppercase tracking-widest mt-0.5">NOT ME BUT YOU</p>
                             </div>
                         </div>
                     </div>
@@ -1631,7 +1641,7 @@
             triggerHaptic();
             if(!surveys.length) return window.showAlert("ഡൗൺലോഡ് ചെയ്യാൻ ഡാറ്റ ലഭ്യമായിട്ടില്ല.", "ഡാറ്റാബേസ് ശൂന്യമാണ്", "info");
 
-            let docContent = "NATIONAL SERVICE SCHEME (NSS) - MAHATMA GANDHI COLLEGE IRITTY\n";
+            let docContent = "NATIONAL SERVICE SCHEME (UNITS 30 & 63) - MAHATMA GANDHI COLLEGE IRITTY\n";
             docContent += "NSS GRAMA (MANASAGRAMAM) HOUSEHOLD ENERGY AUDIT SURVEY REPORT\n";
             docContent += "MOTTO: NOT ME BUT YOU\n";
             docContent += "========================================================\n\n";
@@ -1678,7 +1688,7 @@
             const blob = new Blob([docContent], { type: 'text/plain;charset=utf-8;' });
             const a = document.createElement('a');
             a.href = URL.createObjectURL(blob);
-            a.download = `NSS_EnergyAudit_Manasagramam_WordReport_${new Date().toISOString().split('T')[0]}.txt`;
+            a.download = `NSS_Units30_63_EnergyAudit_WordReport_${new Date().toISOString().split('T')[0]}.txt`;
             a.click();
             window.showAlert("ടെക്സ്റ്റ്/വേഡ് സമറി ഫയൽ ഡൗൺലോഡ് ആയിട്ടുണ്ട്.", "ഡൗൺലോഡ് കഴിഞ്ഞു", "success");
         };
@@ -1728,7 +1738,7 @@
             const blob = new Blob([`${headers}\n${rows}`], {type: 'text/csv;charset=utf-8;'});
             const a = document.createElement('a'); 
             a.href = URL.createObjectURL(blob); 
-            a.download = `NSS_Manasagramam_EnergyAudit_${new Date().toISOString().split('T')[0]}.csv`; 
+            a.download = `NSS_Units30_63_EnergyAudit_${new Date().toISOString().split('T')[0]}.csv`; 
             a.click();
             window.showAlert("CSV ഫയൽ വിജയികരമായി എക്‌സ്‌പോർട്ട് ചെയ്തു.", "CSV ഫയൽ ഡൗൺലോഡ് ആയി", "success");
         };
@@ -1741,7 +1751,7 @@
             const blob = new Blob([JSON.stringify(cleanData, null, 2)], {type: 'application/json'});
             const a = document.createElement('a');
             a.href = URL.createObjectURL(blob);
-            a.download = `NSS_Manasagramam_EnergyAudit_${new Date().toISOString().split('T')[0]}.json`;
+            a.download = `NSS_Units30_63_EnergyAudit_${new Date().toISOString().split('T')[0]}.json`;
             a.click();
             window.showAlert("JSON എക്‌സ്‌പോർട്ട് പൂർത്തിയായി.", "JSON ഡൗൺലോഡ് ആയി", "success");
         };
@@ -1761,9 +1771,9 @@
                     setTimeout(() => {
                         window.print();
                         window.closeCustomAlert();
-                    }, 1500);
+                    }, 1200);
                 }
-            }, 500);
+            }, 400);
         };
 
         window.resetFormInternal = () => {
@@ -1781,7 +1791,7 @@
             document.querySelectorAll('[data-parent]').forEach(el => el.classList.add('hidden'));
             
             const btn = document.getElementById('submit-btn');
-            if(btn) btn.innerHTML = '<i class="fa-solid fa-cloud-arrow-up text-base text-amber-400"></i> NSS ക്ലൗഡ് സെർവറിലേക്ക് അയക്കുക';
+            if(btn) btn.innerHTML = '<i class="fa-solid fa-cloud-arrow-up text-base text-amber-300"></i> NSS ക്ലൗഡ് സെർവറിലേക്ക് അയക്കുക';
             editModeId = null;
         }
 
@@ -1796,7 +1806,7 @@
         buildMobileForm();
         switchTab('dashboard');
 
-        // Background Cloud Sync Loop
+        // Background Cloud Sync Interval
         setInterval(() => {
             if (navigator.onLine && db) {
                 autoPushUnsynced();
