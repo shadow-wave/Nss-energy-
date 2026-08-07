@@ -8,7 +8,7 @@
     <meta name="theme-color" content="#0f172a">
     <meta name="format-detection" content="telephone=no">
     <link rel="apple-touch-icon" href="college_logo.png">
-    <title>NSS ഗ്രാമ ഊർജ്ജ ഓഡിറ്റ് | MG College Iritty</title>
+    <title>NSS മാനസഗ്രാമം ഊർജ്ജ ഓഡിറ്റ് | MG College Iritty</title>
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -134,7 +134,6 @@
 </head>
 <body class="flex flex-col overflow-hidden">
 
-    <!-- App Splash Loader Overlay -->
     <div id="loader" class="fixed inset-0 bg-slate-950 z-[200] flex flex-col items-center justify-center p-8 transition-opacity duration-700 text-white">
         <div class="flex items-center gap-4 mb-6">
             <div class="w-18 h-18 bg-white/95 rounded-2xl flex items-center justify-center shadow-2xl p-2 backdrop-blur-md">
@@ -144,7 +143,7 @@
                 <img src="nss_logo.png" onerror="this.style.display='none'" class="w-full h-full object-contain">
             </div>
         </div>
-        <h1 class="text-3xl font-black tracking-tight mb-1 text-center uppercase bg-gradient-to-r from-amber-300 via-sky-200 to-white bg-clip-text text-transparent">NSS Grama Energy Audit</h1>
+        <h1 class="text-3xl font-black tracking-tight mb-1 text-center uppercase bg-gradient-to-r from-amber-300 via-sky-200 to-white bg-clip-text text-transparent">NSS ഗ്രാമ ഊർജ്ജ ഓഡിറ്റ്</h1>
         <p class="text-xs font-black text-amber-400 tracking-[0.25em] uppercase mb-1 text-center">National Service Scheme (NSS)</p>
         <p class="text-[10px] font-bold text-sky-200 tracking-widest uppercase mb-10 text-center">Mahatma Gandhi College Iritty • NOT ME BUT YOU</p>
         
@@ -182,7 +181,6 @@
         </div>
     </div>
 
-    <!-- App Navigation Header -->
     <header class="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-slate-200/60 safe-pt print-hidden">
         <div class="px-4 py-3 flex items-center justify-between max-w-xl mx-auto">
             <div class="flex items-center gap-2.5">
@@ -210,7 +208,6 @@
         </div>
     </header>
 
-    <!-- Main Scroll Body Container -->
     <main id="main-scroll" class="flex-grow overflow-y-auto no-scrollbar header-spacing nav-spacing relative w-full h-full print:h-auto print:overflow-visible print:block print:p-0 print:m-0">
         
         <!-- DASHBOARD VIEW -->
@@ -704,7 +701,7 @@
                 if(text) text.innerText = `${unsyncedCount} UNPUSHED`;
                 if(toolSync) toolSync.innerText = `${unsyncedCount} Pending`;
             } else {
-                if(badge) badge.className = "cursor-pointer flex items-center gap-1.5 bg-emerald-50 text-emerald-600 px-2.5 py-1 rounded-full text-[9px] font-black border border-emerald-100 transition-all active:scale-95";
+                if(badge) badge.className = "cursor-pointer flex items-center gap-1.5 bg-emerald-50 text-emerald-600 px-3 py-1.5 rounded-full text-[9px] font-black border border-emerald-100 transition-all active:scale-95";
                 if(text) text.innerText = "SYNCED";
                 if(toolSync) toolSync.innerText = "Connected";
             }
@@ -1118,17 +1115,23 @@
             triggerHaptic();
             window.showConfirm("ഈ സർവേ വിവരങ്ങൾ ഡിലീറ്റ് ചെയ്യാൻ ഉറപ്പാണോ?", async () => {
                 try {
-                    if(db && navigator.onLine) {
-                        await deleteDoc(doc(db, 'surveys', id));
+                    // Try cloud deletion if online and valid firestore doc
+                    if(db && navigator.onLine && id && !id.startsWith('local_')) {
+                        try {
+                            await deleteDoc(doc(db, 'surveys', id));
+                        } catch(cloudErr) {
+                            console.log('Cloud delete note:', cloudErr);
+                        }
                     }
                     surveys = surveys.filter(s => s.id !== id);
                     saveLocalSurveys();
                     renderDashboard();
-                    window.showAlert("വിവരങ്ങൾ ഡിലീറ്റ് ചെയ്തു.", "ഡിലീറ്റ് ആയി", "info");
+                    window.showAlert("വിവരങ്ങൾ വിജയകരമായി ഒഴിവാക്കി.", "ഡിലീറ്റ് ചെയ്തു", "info");
                 } catch (error) {
                     surveys = surveys.filter(s => s.id !== id);
                     saveLocalSurveys();
                     renderDashboard();
+                    window.showAlert("ലോക്കൽ സ്റ്റോറേജിൽ നിന്ന് വിവരങ്ങൾ ഒഴിവാക്കി.", "ഡിലീറ്റ് ചെയ്തു", "info");
                 }
             }, "വിവരങ്ങൾ ഡിലീറ്റ് ചെയ്യുക");
         };
@@ -1212,7 +1215,7 @@
 
             if (navigator.onLine && db) {
                 try {
-                    if (editModeId) {
+                    if (editModeId && !editModeId.startsWith('local_')) {
                         await updateDoc(doc(db, 'surveys', editModeId), cleanRecord);
                         pushedToCloud = true;
                     } else {
@@ -1474,7 +1477,7 @@
                             <h2 class="text-xl print:text-[14px] font-black tracking-widest text-slate-900 uppercase leading-tight m-0 p-0">NSS HOUSEHOLD ENERGY AUDIT REPORT</h2>
                             <p class="text-sm print:text-[10px] font-extrabold text-sky-800 mt-1 print:mt-0.5 m-0 p-0 uppercase">NATIONAL SERVICE SCHEME (NSS)</p>
                             <p class="text-xs print:text-[9px] font-extrabold text-slate-800 mt-0.5 m-0 p-0">Mahatma Gandhi College, Iritty</p>
-                            <p class="text-[10px] print:text-[7px] font-bold text-amber-600 mt-1 print:mt-0.5 tracking-widest uppercase m-0 p-0">NOT ME BUT YOU • NSS GRAMA ENERGY INITIATIVE</p>
+                            <p class="text-[10px] print:text-[7px] font-bold text-amber-600 mt-1 print:mt-0.5 tracking-widest uppercase m-0 p-0">NOT ME BUT YOU • NSS GRAMA (MANASAGRAMAM) INITIATIVE</p>
                         </div>
                         <div class="flex items-center gap-3">
                             <img src="nss_logo.png" class="h-16 w-16 print:h-[45px] print:w-[45px] object-contain" onerror="this.style.display='none'">
@@ -1629,7 +1632,7 @@
             if(!surveys.length) return window.showAlert("ഡൗൺലോഡ് ചെയ്യാൻ ഡാറ്റ ലഭ്യമായിട്ടില്ല.", "ഡാറ്റാബേസ് ശൂന്യമാണ്", "info");
 
             let docContent = "NATIONAL SERVICE SCHEME (NSS) - MAHATMA GANDHI COLLEGE IRITTY\n";
-            docContent += "NSS GRAMA HOUSEHOLD ENERGY AUDIT SURVEY REPORT\n";
+            docContent += "NSS GRAMA (MANASAGRAMAM) HOUSEHOLD ENERGY AUDIT SURVEY REPORT\n";
             docContent += "MOTTO: NOT ME BUT YOU\n";
             docContent += "========================================================\n\n";
 
@@ -1675,7 +1678,7 @@
             const blob = new Blob([docContent], { type: 'text/plain;charset=utf-8;' });
             const a = document.createElement('a');
             a.href = URL.createObjectURL(blob);
-            a.download = `NSS_EnergyAudit_WordReport_${new Date().toISOString().split('T')[0]}.txt`;
+            a.download = `NSS_EnergyAudit_Manasagramam_WordReport_${new Date().toISOString().split('T')[0]}.txt`;
             a.click();
             window.showAlert("ടെക്സ്റ്റ്/വേഡ് സമറി ഫയൽ ഡൗൺലോഡ് ആയിട്ടുണ്ട്.", "ഡൗൺലോഡ് കഴിഞ്ഞു", "success");
         };
@@ -1725,7 +1728,7 @@
             const blob = new Blob([`${headers}\n${rows}`], {type: 'text/csv;charset=utf-8;'});
             const a = document.createElement('a'); 
             a.href = URL.createObjectURL(blob); 
-            a.download = `NSS_Kerala_EnergyAudit_${new Date().toISOString().split('T')[0]}.csv`; 
+            a.download = `NSS_Manasagramam_EnergyAudit_${new Date().toISOString().split('T')[0]}.csv`; 
             a.click();
             window.showAlert("CSV ഫയൽ വിജയികരമായി എക്‌സ്‌പോർട്ട് ചെയ്തു.", "CSV ഫയൽ ഡൗൺലോഡ് ആയി", "success");
         };
@@ -1738,7 +1741,7 @@
             const blob = new Blob([JSON.stringify(cleanData, null, 2)], {type: 'application/json'});
             const a = document.createElement('a');
             a.href = URL.createObjectURL(blob);
-            a.download = `NSS_Kerala_EnergyAudit_${new Date().toISOString().split('T')[0]}.json`;
+            a.download = `NSS_Manasagramam_EnergyAudit_${new Date().toISOString().split('T')[0]}.json`;
             a.click();
             window.showAlert("JSON എക്‌സ്‌പോർട്ട് പൂർത്തിയായി.", "JSON ഡൗൺലോഡ് ആയി", "success");
         };
@@ -1789,7 +1792,6 @@
             }, "ഫോം ക്ലിയർ ചെയ്യുക");
         };
 
-        // Bootstrapping Application
         startApp();
         buildMobileForm();
         switchTab('dashboard');
